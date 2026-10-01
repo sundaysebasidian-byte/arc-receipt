@@ -1,0 +1,21 @@
+{
+  "name": "arc-receipt",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Read-only Arc mainnet USDC movement verification and invoice reconciliation",
+  "scripts": {
+    "start": "node scripts/server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "probe": "node scripts/probe.mjs",
+    "verify": "node scripts/verify.mjs",
+    "qa": "node scripts/browser-qa.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "playwright": "1.58.2"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,108 @@
+{
+  "checkedAt": "2026-09-30T18:57:42.701Z",
+  "checks": [
+    {
+      "case": "Initial desktop and server allowlist",
+      "source": "local"
+    },
+    {
+      "case": "Inline invalid input with keyboard focus",
+      "source": "local"
+    },
+    {
+      "case": "Synthetic mode unmistakable in UI and both exports",
+      "source": "local"
+    },
+    {
+      "case": "Editing clears previous observation",
+      "source": "local"
+    },
+    {
+      "case": "Real mainnet exact receipt, six explicit checks, Arc one-block default",
+      "source": "actual_public_rpc",
+      "tx": "0xa1d4b142cdd89abccc7524db878774661e678c8538a732c79f36588e0c58bf07"
+    },
+    {
+      "case": "Readable HTML receipt with full identifiers and trust boundary",
+      "source": "actual_public_rpc"
+    },
+    {
+      "case": "Movement drill-down counts canonical stream once",
+      "source": "actual_public_rpc"
+    },
+    {
+      "case": "Saved evidence reimported and fetched fresh from mainnet",
+      "source": "actual_public_rpc"
+    },
+    {
+      "case": "Tampered saved amount/status flagged; supplied endpoint ignored",
+      "source": "modified_saved_claims_then_actual_public_rpc"
+    },
+    {
+      "case": "Real successful transaction forwards all funds; never shown paid",
+      "source": "actual_public_rpc",
+      "tx": "0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8"
+    },
+    {
+      "case": "390px mobile real mainnet receipt and viewport screenshots",
+      "source": "actual_public_rpc"
+    },
+    {
+      "case": "320px mobile no horizontal overflow and touch-size primary action",
+      "source": "local_layout"
+    },
+    {
+      "case": "Explorer URL normalization and exact underpayment difference",
+      "source": "replayed_public_evidence_fixture"
+    },
+    {
+      "case": "Overpayment remains review state",
+      "source": "replayed_public_evidence_fixture"
+    },
+    {
+      "case": "Another chain clears receipt with specific recovery text",
+      "source": "injected_abnormal_rpc_fixture"
+    },
+    {
+      "case": "Absent receipt clears receipt with specific recovery text",
+      "source": "injected_abnormal_rpc_fixture"
+    },
+    {
+      "case": "Reverted transaction clears receipt with specific recovery text",
+      "source": "injected_abnormal_rpc_fixture"
+    },
+    {
+      "case": "Block mismatch clears receipt with specific recovery text",
+      "source": "injected_abnormal_rpc_fixture"
+    },
+    {
+      "case": "Conflicting ERC20/native stream refused in UI",
+      "source": "injected_abnormal_rpc_fixture"
+    },
+    {
+      "case": "Rate-limit error has recovery action and no payment conclusion",
+      "source": "injected_http_429"
+    },
+    {
+      "case": "Cancellation prevents delayed response from rendering stale receipt",
+      "source": "injected_delayed_transport"
+    },
+    {
+      "case": "Editing during receipt-file read prevents stale import takeover",
+      "source": "injected_delayed_local_file_read"
+    },
+    {
+      "case": "Only four read RPC methods, no wallet/write calls or runtime errors",
+      "source": "all_observed_requests"
+    }
+  ],
+  "errors": [],
+  "liveWrites": 0,
+  "rpcMethods": [
+    "eth_chainId",
+    "eth_getTransactionReceipt",
+    "eth_getBlockByNumber",
+    "eth_blockNumber"
+  ],
+  "passed": true
+}

@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+"""Build audited publication candidates offline; never creates accounts or publishes."""
+import hashlib, json, re, shutil, stat, zipfile
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/'release'
+RUNTIME=['index.html','style.css','app.mjs','verifier.mjs','receipt.mjs','sample.mjs','live-example.mjs','_headers']
+SOURCE=['LICENSE','package.json','package-lock.json','.gitignore','scripts/server.mjs','scripts/verify.mjs','scripts/probe.mjs','scripts/capture-roundtrip.mjs','scripts/browser-qa.mjs','scripts/receipt-render-qa.mjs','scripts/prepare-publication.py','scripts/deploy-pages.mjs','test/verifier.test.mjs','test/receipt.test.mjs','evidence/browser-live-receipt.json','evidence/mainnet-roundtrip.json','evidence/mainnet-input.json','evidence/browser-qa.json','evidence/unit-test.log','evidence/desktop-mainnet.png','evidence/mobile-receipt.png']+['web/'+x for x in RUNTIME]
+PUBLIC_README='''# Arc Receipt\n\nAn independent, read-only Arc mainnet USDC movement verifier. Enter a public transaction hash and recipient, optionally set an exact expected amount, then inspect six checks and export readable HTML plus raw JSON evidence. Reimport JSON to recompute saved claims and query the fixed official RPC again.\n\nArc emits 18-decimal native system logs and 6-decimal ERC-20 logs for the same ERC-20 movement. We match those movements and count only the canonical system stream. Native-only sends work too. Gas and incoming mints are excluded; outgoing burns and forwarding reduce the recipient's transaction-local net. All amount arithmetic is integer based.\n\nNo wallet, signature, custody, account, database, analytics or verification gas. The examples are existing third-party public transactions, not builder transactions or user earnings. A successful receipt can have zero net payment.\n\n## Run\n\nNode.js 22+: `npm start`, then http://127.0.0.1:4313. `npm test` runs 45 recorded-evidence/import/transport tests without network access. `npm run verify -- --recheck evidence/browser-live-receipt.json` makes fresh public RPC reads.\n\nFor browser QA: `npm ci --ignore-scripts --no-audit --no-fund`, set `CHROME_PATH` to an installed Chrome executable, then `npm run qa`. The QA uses a temporary headless profile; 23 checks distinguish genuine public RPC cases from injected faults. It does not attach to existing browser accounts.\n\n## Demo\n\nClick Exact receipt for 268.350916 USDC and six checks. Open Follow the USDC movement to see one canonical movement and an excluded ERC-20 duplicate. Download HTML/JSON, then reimport the JSON for a fresh check. Click Received, then forwarded: successful execution, 1458.033036 USDC in and out, zero net receipt.\n\n## Prepare a static deployment\n\nPython 3: `python3 scripts/prepare-publication.py` produces audited, deterministic source and Pages asset ZIPs in `release/`. `node scripts/deploy-pages.mjs --project YOUR_PROJECT` prints a pinned CLI command only. See `DEPLOYMENT.md` for user-controlled publishing after authorization.\n\n## Trust limits\n\nUnsigned RPC observation, not validator signatures or a cryptographic inclusion proof. Single-provider trust; no invoice identity, ownership or cross-invoice reuse ledger. Matching an amount does not itself authorize shipment. Arc settles committed blocks deterministically; extra observed blocks are optional business policy, not additional consensus finality. No grant eligibility, award, adoption or revenue is claimed.\n\n## License\n\nMIT. See [LICENSE](LICENSE). Copyright (c) 2026 sundaysebasidian-byte.\n\nPublic source: https://github.com/sundaysebasidian-byte/arc-receipt. Public hosting and organizer confirmation of read-only grant eligibility remain pending.\n\nSources: [Arc system events](https://docs.arc.io/arc/references/usdc-system-events), [Arc deterministic finality](https://docs.arc.io/arc/concepts/deterministic-finality).\n'''
+DEPLOYMENT='''# Static deployment instructions\n\nThis folder is a candidate, not an existing deployment. No credentials are included. The owner approved publication of this source repository under MIT at https://github.com/sundaysebasidian-byte/arc-receipt. Website hosting, its account/terms, and external organizer contact require separate authorization. This script does not publish anything.\n\n1. Run `python3 scripts/prepare-publication.py`. Keep `release/pages/` or `release/arc-pages-assets.zip` for Cloudflare Pages Free Direct Upload. It contains exactly eight files at the ZIP root, with no backend or Functions.\n2. After publication approval, the owner can upload that ZIP/folder in the Cloudflare dashboard following https://developers.cloudflare.com/pages/get-started/direct-upload/. Registration/login or new terms remain owner controlled. Estimated free static hosting is $0/month; no paid domain or verification gas is required. Free-plan/RPC limits may change.\n3. Optional CLI route after approval: install or invoke the official pinned `wrangler@4.145.0` (Node >=22), complete owner-controlled login, choose the exact approved account/project, then `node scripts/deploy-pages.mjs --project YOUR_PROJECT --account APPROVED_ACCOUNT_ID --publish-approved`. The default invocation only prints instructions. The script does not create a project or log in. If Wrangler requests a new account/project or terms unexpectedly, stop for the owner.\n4. In a fresh source checkout, create a new Git repository and upload only this source candidate to the approved GitHub destination. Do not upload an older local Git history.\n5. Verify the deployed root URL loads, the eight runtime assets return successful responses, _headers were applied, and the browser can read the official Arc RPC. Re-run both public examples and download/reimport evidence. Never treat successful hosting as grant qualification.\n\nDirect Upload cannot later be switched into Git integration without a new project. Wrangler accepts a folder; the dashboard accepts a folder or ZIP. Ordinary GitHub Pages project subpaths require URL adjustment because runtime assets currently use root-relative paths.\n'''
+RULES=[('private_key_pem',rb'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----'),('aws_access_key',rb'AKIA[0-9A-Z]{16}'),('github_token',rb'(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{50,})'),('openai_key',rb'sk-proj-[A-Za-z0-9_-]{20,}'),('jwt',rb'eyJ[A-Za-z0-9_-]{15,}\.[A-Za-z0-9_-]{15,}\.[A-Za-z0-9_-]{15,}'),('private_key_assignment',rb'(?i)(?:private[_-]?key|secret[_-]?key)\s*[:=]\s*["\x27](?:0x)?[0-9a-f]{64}["\x27]'),('local_user_path',rb'(?:/Users|/home)/[A-Za-z0-9_.-]+/'),('library_identity',rb'(?:libfile_[a-z0-9]{32}|file_000[0-9a-z]{20,})')]
+def audit(path):
+ hits=[];files=[]
+ for p in sorted(path.rglob('*')):
+  if p.is_symlink():raise RuntimeError('Symlink excluded: '+str(p.relative_to(path)))
+  if not p.is_file():continue
+  b=p.read_bytes();name=p.relative_to(path).as_posix();files.append({'path':name,'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest()})
+  if p.suffix.lower() not in ['.png']:
+   for label,pattern in RULES:
+    if re.search(pattern,b):hits.append({'path':name,'rule':label})
+ return files,hits
+
+def write_zip(folder,path):
+ with zipfile.ZipFile(path,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
+  for p in sorted(folder.rglob('*')):
+   if p.is_file():
+    info=zipfile.ZipInfo(p.relative_to(folder).as_posix(),date_time=(2026,9,30,0,0,0));info.external_attr=(stat.S_IFREG|0o644)<<16;info.compress_type=zipfile.ZIP_DEFLATED;z.writestr(info,p.read_bytes())
+
+def main():
+ if OUT.is_symlink():raise RuntimeError('Release output must not be a symlink.')
+ OUT.mkdir(exist_ok=True)
+ for name in ['pages','source']:
+  folder=OUT/name
+  if folder.exists():
+   if folder.is_symlink() or not ((OUT/(name+'.arc-generated')).is_file() or (folder/'.arc-generated').is_file()):raise RuntimeError('Refuse to overwrite unmanaged output '+name)
+   shutil.rmtree(folder)
+  folder.mkdir();(OUT/(name+'.arc-generated')).write_text('generated locally; not published\n')
+ for name in RUNTIME:shutil.copyfile(ROOT/'web'/name,OUT/'pages'/name)
+ for name in SOURCE:
+  origin=ROOT/name
+  if origin.is_symlink() or not origin.is_file():raise RuntimeError('Expected regular source file '+name)
+  dst=OUT/'source'/name;dst.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(origin,dst)
+ for base in [OUT/'pages',OUT/'source'/'web']:
+  p=base/'index.html';p.write_text(p.read_text().replace('Local review · public deployment pending','Read-only prototype · public mainnet examples'))
+ (OUT/'source'/'README.md').write_text(PUBLIC_README)
+ (OUT/'source'/'DEPLOYMENT.md').write_text(DEPLOYMENT)
+ records={};findings=[]
+ for name in ['pages','source']:
+  records[name],hits=audit(OUT/name);findings.extend([{'candidate':name,**x} for x in hits])
+ report={'passed':not findings,'method':'explicit file allowlist plus contextual credential/private-path patterns and human review','scope':'candidate bytes only; no wallet, credential directories, user environment or Git history read','findings':findings,'publications':0,'files':records,'limitations':'This audit does not prove absence of every secret. Public tx/block/topic/data hashes and package-lock integrity values are legitimate and were reviewed by context. MIT source publication approved by owner; website hosting and external organizer contact remain pending. This script performs no publication.'}
+ (OUT/'publication-audit.json').write_text(json.dumps(report,indent=2)+'\n')
+ if findings:raise RuntimeError('Audit failed; inspect rule names in publication-audit.json (no matched secret text printed).')
+ for name,zipname in [('pages','arc-pages-assets.zip'),('source','arc-public-source.zip')]:write_zip(OUT/name,OUT/zipname)
+ checksums={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [OUT/'arc-pages-assets.zip',OUT/'arc-public-source.zip']}
+ (OUT/'checksums.json').write_text(json.dumps(checksums,indent=2)+'\n')
+ print(json.dumps({'passed':True,'runtimeFiles':len(records['pages']),'sourceFiles':len(records['source']),'findings':0,'zipSHA256':checksums,'published':False},indent=2))
+if __name__=='__main__':main()

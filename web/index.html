@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#173e33"><title>Arc Receipt · Evidence for USDC payments</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<div class="shell">
+<header><a class="brand" href="/" aria-label="Arc Receipt home"><span class="mark">↗</span> Arc Receipt <span class="version">LAB / 02</span></a><span class="tag"><i></i> READ ONLY · NO WALLET</span></header>
+<main>
+<section class="intro"><div><div class="eyebrow">PAYMENT EVIDENCE / ARC MAINNET</div><h1>Verify USDC.<br>Know what arrived.</h1><p>Turn a transaction hash into an explainable receipt.<br>Check the recipient, reconcile the amount and keep the evidence.</p></div><aside class="hero-note"><span class="note-line">ONE USDC BALANCE.</span><strong>Count it once.</strong><p>Native sends + ERC-20 transfers.<br>One canonical event stream, no double-counting.</p><a href="https://docs.arc.io/arc/references/usdc-system-events" target="_blank" rel="noopener noreferrer">Built around Arc’s event model ↗</a></aside></section>
+<div class="workspace-top"><span><i></i> Live verification via the official Arc node</span><span>No custody · No signing · No gas to verify</span></div>
+<section class="workspace" aria-label="USDC receipt workspace">
+<div class="form-panel">
+<div class="panel-heading"><span class="step">01</span><h2>Payment details</h2><span class="network">ARC / 5042</span></div>
+<form id="verify-form" novalidate>
+<label for="tx">Transaction hash</label><input id="tx" name="tx" placeholder="0x… or an Arc explorer transaction URL" required autocomplete="off" spellcheck="false" aria-describedby="tx-error"><p id="tx-error" class="field-error" hidden></p>
+<label for="recipient">Recipient address</label><input id="recipient" name="recipient" placeholder="0x… the address you want to verify" required autocomplete="off" spellcheck="false" aria-describedby="recipient-error"><p id="recipient-error" class="field-error" hidden></p>
+<label for="amount">Expected USDC <span class="optional">optional</span></label><div class="amount-input"><input id="amount" name="amount" placeholder="e.g. 268.350916" inputmode="decimal" autocomplete="off" aria-describedby="amount-error"><span>USDC</span></div><p id="amount-error" class="field-error" hidden></p>
+<p class="hint">We compare the exact net payment movement. Without an expected amount, we verify a transfer only.</p>
+<details class="policy-settings"><summary>Observation policy <span>1 block by default</span></summary><div><label for="confirmations">Included blocks to observe</label><input id="confirmations" name="confirmations" type="number" min="1" max="1000" step="1" value="1" required aria-describedby="confirmations-error"><p id="confirmations-error" class="field-error" hidden></p><p>Arc settles on block commit. Extra blocks are an optional business policy, not additional protocol finality.</p></div></details>
+<button id="verify" class="primary" type="submit">Verify payment <span>↗</span></button>
+</form>
+<div class="examples"><div class="section-label">TRY A REAL MAINNET CASE</div><button id="live-example" class="example-button" type="button"><span><strong>Exact receipt</strong><small>268.350916 USDC · public transfer</small></span><span>↗</span></button><button id="roundtrip-example" class="example-button" type="button"><span><strong>Received, then forwarded</strong><small>Successful transaction · zero net receipt</small></span><span>↗</span></button><div class="example-bottom"><button id="sample" class="text-button" type="button">Offline example</button><button id="import" class="text-button" type="button">Recheck saved JSON ↑</button><input id="receipt-file" class="sr-only" type="file" accept=".json,application/json" tabindex="-1" aria-label="Choose an Arc Receipt JSON export"></div><p class="privacy">Examples are third-party public transactions, not your earnings. Inputs go to Arc’s public RPC. No account, analytics or saved history.</p></div>
+</div>
+<div class="result-panel">
+<div class="panel-heading"><span class="step">02</span><h2>Receipt & evidence</h2><span class="result-badge">USDC</span></div>
+<div id="empty" class="empty"><div class="receipt-icon"><span>ARC</span><i></i><i></i><i></i><b>✓</b></div><h3>Evidence you can explain.</h3><p>Six explicit checks. Exact amounts.<br>A receipt you can read, export and recheck.</p><div class="empty-checks"><span>Chain</span><span>Execution</span><span>Recipient</span><span>Amount</span></div></div>
+<div id="loading" class="loading-state" hidden><div class="section-label">READING ARC MAINNET</div><h3 id="loading-title">Checking network…</h3><div class="loading-track"><span id="loading-progress"></span></div><ol id="loading-steps"><li data-stage="chain">Network identity</li><li data-stage="receipt">Transaction outcome</li><li data-stage="block">Canonical inclusion</li><li data-stage="analysis">USDC reconciliation</li></ol><button id="cancel" class="secondary" type="button">Cancel check</button><p>No signature or transaction is requested.</p></div>
+<section id="error" class="error" role="alert" hidden><span class="error-icon">!</span><h3 id="error-title"></h3><p id="error-detail"></p><p id="error-next" class="error-next"></p><button id="retry" class="secondary" type="button">Try again</button><small id="error-code"></small></section>
+<article id="result" hidden>
+<div id="mode" class="mode"></div><div id="recheck-note" class="recheck-note" hidden></div>
+<div class="receipt-summary"><div><div id="status" class="status"></div><div class="amount"><span id="net">0</span> <small>USDC</small></div><p class="amount-label">Net payment movement · selected recipient</p></div><div class="summary-mark" id="summary-mark">✓</div></div>
+<p id="explanation" class="explanation"></p><div id="amount-comparison" class="comparison" hidden></div>
+<div class="verification-heading"><h3>Why this result</h3><span id="check-count"></span></div><ol id="checks" class="check-grid"></ol>
+<div class="receipt-meta"><div><span>RECIPIENT</span><div class="identity-line"><code id="recipient-full"></code><button id="copy-recipient" class="copy-button" type="button" aria-label="Copy full recipient address">Copy</button></div></div><div><span>TRANSACTION</span><div class="identity-line"><code id="hash-full"></code><button id="copy-hash" class="copy-button" type="button" aria-label="Copy full transaction hash">Copy</button></div></div><div class="time-row"><div><span>BLOCK TIME / UTC</span><p id="block-time"></p></div><div><span>OBSERVED / UTC</span><p id="checked-time"></p></div></div></div>
+<details id="movement-detail" class="evidence-details"><summary>Follow the USDC movement <span id="movement-count"></span></summary><div id="movements" class="movements"></div><p id="stream-note"></p></details>
+<details class="evidence-details"><summary>Inspect verification policy & source</summary><dl id="details"></dl><p>Only Arc’s 18-decimal system emitter contributes to totals. Gas and incoming mints are excluded; outgoing burns are deducted.</p></details>
+<div class="actions"><button id="download-readable" class="primary" type="button">Readable receipt ↓</button><button id="download" class="secondary" type="button">Evidence JSON ↓</button></div><div class="receipt-links"><a id="explorer" target="_blank" rel="noopener noreferrer">Open in explorer ↗</a><button id="recheck" class="text-button" type="button">Recheck live ↻</button></div><p class="trust">Unsigned RPC observation, not a validator or cryptographic inclusion proof. A matching amount does not identify an invoice or prove wallet ownership.</p>
+</article>
+</div>
+</section>
+<section class="method"><div><span>01 / ARC-SPECIFIC</span><h3>Native USDC, understood</h3><p>Two event streams describe one balance. We match the emitters and precision, so an ERC-20 transfer never doubles the total.</p></div><div><span>02 / AMOUNT-AWARE</span><h3>Success is only the start</h3><p>Reverted transactions, wrong recipients and same-transaction forwarding cannot become an exact positive net receipt.</p></div><div><span>03 / REPRODUCIBLE</span><h3>Evidence travels with you</h3><p>Keep the raw JSON and a readable receipt. Import the JSON to recompute its claims and fetch the transaction again.</p></div></section>
+</main>
+<footer><span>Arc Receipt · independent builder prototype</span><span>Read-only prototype · public mainnet examples</span><a href="https://docs.arc.io/arc/concepts/deterministic-finality" target="_blank" rel="noopener noreferrer">Arc settlement model ↗</a></footer><div id="toast" class="toast" role="status" hidden></div>
+</div><script type="module" src="/app.mjs"></script>
+</body></html>
