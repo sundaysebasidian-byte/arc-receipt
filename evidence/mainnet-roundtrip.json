@@ -7,8 +7,8 @@
   "recipient": "0xe9fae1c386c6f45b1fb3c3ef01ade424dad4bccf",
   "blockNumber": "23560813",
   "blockHash": "0x76c07921c9551d594ddff7647c6098897f0c56568cced3b39abf7b025e032304",
-  "observedHead": "23584965",
-  "confirmations": "24153",
+  "observedHead": "23734079",
+  "confirmations": "173267",
   "minConfirmations": 1,
   "confirmationPolicyMet": true,
   "expectedAmountUSDC": "1458.033036",
@@ -83,12 +83,12 @@
       "key": "policy",
       "label": "Observation policy",
       "state": "passed",
-      "detail": "24153 included block(s) observed; 1 requested"
+      "detail": "173267 included block(s) observed; 1 requested"
     }
   ],
   "explorerURL": "https://explorer.arc.io/tx/0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8",
   "trust": "Unsigned RPC observation. Re-run against a trusted RPC; confirmations are not a finality proof. Amounts describe explicit payment movements, exclude incoming mints and gas fees, and deduct outgoing burns. A matching amount does not prove invoice identity, ownership, or prevent reuse across invoices.",
-  "checkedAt": "2026-09-30T18:57:38.473Z",
+  "checkedAt": "2026-10-01T15:58:50.963Z",
   "rpcURL": "https://rpc.mainnet.arc.io",
   "evidence": {
     "chainId": "0x13b2",
@@ -493,7 +493,7 @@
       ],
       "withdrawals": []
     },
-    "head": "0x167e0c5"
+    "head": "0x16a273f"
   },
   "mode": "live_rpc"
 }

@@ -16,6 +16,33 @@ For browser QA: `npm ci --ignore-scripts --no-audit --no-fund`, set `CHROME_PATH
 
 Click Exact receipt for 268.350916 USDC and six checks. Open Follow the USDC movement to see one canonical movement and an excluded ERC-20 duplicate. Download HTML/JSON, then reimport the JSON for a fresh check. Click Received, then forwarded: successful execution, 1458.033036 USDC in and out, zero net receipt.
 
+## Reviewable interface and evidence
+
+Rechecked October 1, 2026 against the official public RPC. The 23 browser checks separate actual mainnet reads from replayed/injected abnormal responses; only four read methods were observed, with no browser errors or write requests. The 45 verifier/import/transport tests also passed after the refreshed observations. These checks verify the prototype's behavior, not grant eligibility or a production certification.
+
+<details>
+<summary>Desktop: exact observed receipt, six explainable checks</summary>
+
+<img src="evidence/desktop-mainnet.png" alt="Local browser screenshot showing a real public Arc transaction with 268.350916 USDC net received and six checks" width="960">
+
+</details>
+
+<details>
+<summary>Real counterexample: successful execution, zero net receipt</summary>
+
+<img src="evidence/desktop-zero-net.png" alt="Local browser screenshot showing 1458.033036 USDC incoming and outgoing in the same successful public transaction, with zero net received" width="960">
+
+</details>
+
+<details>
+<summary>Mobile: receipt details at 390 pixels</summary>
+
+<img src="evidence/mobile-receipt.png" alt="390-pixel local mobile viewport showing exact USDC receipt checks and identifiers" width="390">
+
+</details>
+
+Screenshots are from a local interface querying real mainnet data, not a hosted website. Public example addresses and amounts are not the builder's funds, user earnings or project revenue. Reproduce the positive case with `npm run verify -- --recheck evidence/browser-live-receipt.json`; use `evidence/mainnet-roundtrip.json` for the zero-net case. CLI exit 2 for zero-net is an expected review conclusion, not a transport failure.
+
 ## Prepare a static deployment
 
 Python 3: `python3 scripts/prepare-publication.py` produces audited, deterministic source and Pages asset ZIPs in `release/`. `node scripts/deploy-pages.mjs --project YOUR_PROJECT` prints a pinned CLI command only. See `DEPLOYMENT.md` for user-controlled publishing after authorization.
