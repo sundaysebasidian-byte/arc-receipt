@@ -2,7 +2,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 const root=new URL('../',import.meta.url),target=new URL('docs/',root);
-const names=['index.html','style.css','app.mjs','verifier.mjs','receipt.mjs','sample.mjs','live-example.mjs','batch.mjs','batch-ui.mjs','orders.mjs','orders-ui.mjs'];
+const names=['index.html','style.css','app.mjs','verifier.mjs','receipt.mjs','sample.mjs','live-example.mjs','batch.mjs','batch-ui.mjs','orders.mjs','orders-ui.mjs','favicon.svg'];
 await mkdir(target,{recursive:true});
 const files=[];
 for(const name of names){

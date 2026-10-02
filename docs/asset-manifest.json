@@ -5,8 +5,8 @@
   "files": [
     {
       "path": "index.html",
-      "bytes": 22407,
-      "sha256": "e079af7068cb50625661be63007e84e86c621425671946a507320ae64e307d09"
+      "bytes": 22466,
+      "sha256": "a69e0e3dd7e71676a931fee68caddd5f8fdfb55778564bd57df290fba88f7c33"
     },
     {
       "path": "style.css",
@@ -57,6 +57,11 @@
       "path": "orders-ui.mjs",
       "bytes": 6497,
       "sha256": "0b4b925ca1d189d93e47c2c629f433d229541f7d0273a939e87f1f733d72bfc6"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 246,
+      "sha256": "d478f55a0604339690270735f6070f7cbcb9554a2cdd4cded1ca13698f3f268d"
     }
   ],
   "qualification": "Read-only grant eligibility unconfirmed; hosting is not organizer acceptance."
