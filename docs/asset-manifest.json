@@ -1,0 +1,63 @@
+{
+  "schema": "arc-receipt/static-assets-v1",
+  "reviewedBaseline": "efb49dd369c29562b9882d3b039556d536129909",
+  "source": "web/",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 22407,
+      "sha256": "e079af7068cb50625661be63007e84e86c621425671946a507320ae64e307d09"
+    },
+    {
+      "path": "style.css",
+      "bytes": 35627,
+      "sha256": "eb59990184d9f77e6b61487a7e54b3808e3e2852dd26d504ec831dfe9731348b"
+    },
+    {
+      "path": "app.mjs",
+      "bytes": 18008,
+      "sha256": "9d494796c86359a9488004b16a9cbf1c3a9b564ae21a25624fac483973b812d4"
+    },
+    {
+      "path": "verifier.mjs",
+      "bytes": 13629,
+      "sha256": "69df7e8b02b481f8ca0f8bf4ee540a7d978c3b17b378f976e01c7d5b7dd6e1d4"
+    },
+    {
+      "path": "receipt.mjs",
+      "bytes": 11084,
+      "sha256": "4ae07522d6fe48dce6ed0b8fbdca6a6dac81c070aeffef223d6778c2f1332ddc"
+    },
+    {
+      "path": "sample.mjs",
+      "bytes": 978,
+      "sha256": "247ea67da26cab38483f51b0b52d871bc07370cd02cb981f71b5f4b92d99aff2"
+    },
+    {
+      "path": "live-example.mjs",
+      "bytes": 317,
+      "sha256": "e7cc85d92a58f5fc71d3a3c924b0975b80e629e8325a5ee3ea8c9172d8f059eb"
+    },
+    {
+      "path": "batch.mjs",
+      "bytes": 9076,
+      "sha256": "bbfb61627de9edfe75a377321e2b28e0d79ecb05b3678a7139196bd2e1cc80e9"
+    },
+    {
+      "path": "batch-ui.mjs",
+      "bytes": 4695,
+      "sha256": "6620c0ba88a489f4adafc72b5f3605f93fc160187fc004d02f6a66b495cfd948"
+    },
+    {
+      "path": "orders.mjs",
+      "bytes": 12331,
+      "sha256": "7dbcbf466f207de6043d30822e02b6520ee31ebd72364944e2794c69605b6e75"
+    },
+    {
+      "path": "orders-ui.mjs",
+      "bytes": 6497,
+      "sha256": "0b4b925ca1d189d93e47c2c629f433d229541f7d0273a939e87f1f733d72bfc6"
+    }
+  ],
+  "qualification": "Read-only grant eligibility unconfirmed; hosting is not organizer acceptance."
+}

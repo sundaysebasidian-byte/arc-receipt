@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-02T12:00:46.614Z",
+  "passed": true,
+  "source": "exact_independent_review_fixture_then_actual_public_RPC",
+  "fixtureBytes": 100000,
+  "fixtureSHA256": "2e2f56eb3b06a6676443321520a0cf3d7e42811a88736e3da0ae2dbbe95a6320",
+  "requests": [
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "eth_chainId",
+      "params": []
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "method": "eth_getTransactionReceipt",
+      "params": [
+        "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a"
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "method": "eth_getBlockByNumber",
+      "params": [
+        "0x16bb728",
+        false
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 4,
+      "method": "eth_blockNumber",
+      "params": []
+    }
+  ],
+  "actualRPCReads": 4,
+  "errors": [],
+  "writes": 0,
+  "limits": "Third-party public sample; not user earnings or invoice settlement."
+}

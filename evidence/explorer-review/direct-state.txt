@@ -1,0 +1,99 @@
+Chains
+|
+Gas 
+< $0.01
+
+Blockchain
+
+Tokens
+
+Charts & stats
+
+API
+
+Other
+
+/
+Log in
+Transaction details
+Transfer 100.01 USDC to 
+0xA8...C4B3
+Details
+Token transfers
+User operations
+Internal txns
+Logs
+State
+Raw trace
+
+A set of information that represents the current state is updated when a transaction takes place on the network. The below is a summary of those changes.
+
+Type	Address	Before	After	Change	Token ID
+
+	
+0xBa...439F
+	
+6,147,763.049787083973350191 USDC
+	
+6,147,663.039367083973350191 USDC
+	
+- 100.01042
+	
+
+	
+0xA8...C4B3
+	
+0.0005315 USDC
+	
+100.0105315 USDC
+	
++ 100.01
+	
+
+	
+0xA8...C4B3
+	
+0.000531
+ 
+USDC
+	
+100.010531
+ 
+USDC
+	
++ 100.01
+	
+
+	
+0xBa...439F
+	
+6,147,763.049787
+ 
+USDC
+	
+6,147,663.039787
+ 
+USDC
+	
+- 100.01
+	
+Made with
+
+Scan, inspect, and analyze EVM based blockchains with Blockscout, a blockchain explorer for Ethereum networks.
+
+Backend: v11.3.2
+
+Frontend: v2.11.3
+
+Copyright © Blockscout Limited 2023-2026
+
+This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+Contribute
+PRO API
+Autoscout
+Docs
+X
+Discord
+All chains
+
+Arc Mainnet transaction 0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a | Blockscout

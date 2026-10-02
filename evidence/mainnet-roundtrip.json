@@ -7,14 +7,14 @@
   "recipient": "0xe9fae1c386c6f45b1fb3c3ef01ade424dad4bccf",
   "blockNumber": "23560813",
   "blockHash": "0x76c07921c9551d594ddff7647c6098897f0c56568cced3b39abf7b025e032304",
-  "observedHead": "23734079",
-  "confirmations": "173267",
+  "observedHead": "23876128",
+  "confirmations": "315316",
   "minConfirmations": 1,
   "confirmationPolicyMet": true,
-  "expectedAmountUSDC": "1458.033036",
-  "exactAmountMatch": false,
-  "differenceUSDC": "-1458.033036",
-  "amountComparison": "under",
+  "expectedAmountUSDC": null,
+  "exactAmountMatch": null,
+  "differenceUSDC": null,
+  "amountComparison": "not_requested",
   "transferTimeUTC": "2026-09-30T15:33:16.000Z",
   "incomingUSDC": "1458.033036",
   "outgoingUSDC": "1458.033036",
@@ -48,6 +48,39 @@
       "kind": "transfer"
     }
   ],
+  "streamPairs": [
+    {
+      "systemLogIndex": "10",
+      "erc20LogIndex": "11",
+      "from": "0x17288dfc86205301064577b98b02b81017e6f79c",
+      "to": "0xe9fae1c386c6f45b1fb3c3ef01ade424dad4bccf",
+      "systemUnits": "1458033036000000000000",
+      "erc20Units": "1458033036",
+      "amountUSDC": "1458.033036",
+      "kind": "transfer"
+    },
+    {
+      "systemLogIndex": "15",
+      "erc20LogIndex": "16",
+      "from": "0xe9fae1c386c6f45b1fb3c3ef01ade424dad4bccf",
+      "to": "0xc0ecef8cb7b3438e3c86f45b524e505931ae4ed2",
+      "systemUnits": "1458033036000000000000",
+      "erc20Units": "1458033036",
+      "amountUSDC": "1458.033036",
+      "kind": "transfer"
+    },
+    {
+      "systemLogIndex": "18",
+      "erc20LogIndex": "19",
+      "from": "0xc0ecef8cb7b3438e3c86f45b524e505931ae4ed2",
+      "to": "0x870c73c98a14b6956b79247e1a1cdc68ba0060ee",
+      "systemUnits": "1458033036000000000000",
+      "erc20Units": "1458033036",
+      "amountUSDC": "1458.033036",
+      "kind": "transfer"
+    }
+  ],
+  "nativeOnlyLogIndices": [],
   "checks": [
     {
       "key": "chain",
@@ -76,19 +109,19 @@
     {
       "key": "amount",
       "label": "Expected amount",
-      "state": "failed",
-      "detail": "1458.033036 USDC short"
+      "state": "not_requested",
+      "detail": "No expected amount provided"
     },
     {
       "key": "policy",
       "label": "Observation policy",
       "state": "passed",
-      "detail": "173267 included block(s) observed; 1 requested"
+      "detail": "315316 included block(s) observed; 1 requested"
     }
   ],
   "explorerURL": "https://explorer.arc.io/tx/0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8",
   "trust": "Unsigned RPC observation. Re-run against a trusted RPC; confirmations are not a finality proof. Amounts describe explicit payment movements, exclude incoming mints and gas fees, and deduct outgoing burns. A matching amount does not prove invoice identity, ownership, or prevent reuse across invoices.",
-  "checkedAt": "2026-10-01T15:58:50.963Z",
+  "checkedAt": "2026-10-02T12:00:06.656Z",
   "rpcURL": "https://rpc.mainnet.arc.io",
   "evidence": {
     "chainId": "0x13b2",
@@ -493,7 +526,15 @@
       ],
       "withdrawals": []
     },
-    "head": "0x16a273f"
+    "head": "0x16c5220"
   },
-  "mode": "live_rpc"
+  "mode": "live_rpc",
+  "reviewScope": {
+    "version": "arc-receipt/review-scope-v1",
+    "comparisonBasis": "transaction_net",
+    "definition": "Incoming nonzero USDC transfers minus outgoing transfers and burns for one selected address in one transaction.",
+    "exclusions": "Incoming mints, self/zero movements and gas are excluded. This is not an account balance change.",
+    "trust": "Single-provider unsigned RPC observation, not a cryptographic inclusion or validator proof.",
+    "limits": "This single-transaction receipt does not establish address control, customer intent, invoice allocation, partial-payment totals, sweep policy or protection against invoice reuse. The separate order review sums user-assigned transaction-net observations; it does not prove commercial settlement."
+  }
 }

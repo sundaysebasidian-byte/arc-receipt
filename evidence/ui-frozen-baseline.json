@@ -1,0 +1,18 @@
+{
+  "baselineCommit": "82bae7bdb7d5891f8756c82ca8140ed58f46efe0",
+  "files": [
+    {
+      "path": "web/verifier.mjs",
+      "sha256": "69df7e8b02b481f8ca0f8bf4ee540a7d978c3b17b378f976e01c7d5b7dd6e1d4"
+    },
+    {
+      "path": "web/sample.mjs",
+      "sha256": "247ea67da26cab38483f51b0b52d871bc07370cd02cb981f71b5f4b92d99aff2"
+    },
+    {
+      "path": "web/_headers",
+      "sha256": "30ccc341e658f4348b8bd041db475c7cce513d1699307f438db1dc2248df6868"
+    }
+  ],
+  "currentScope": "Core verification/arithmetic/RPC module unchanged. app.mjs, receipt HTML presentation and example constants intentionally changed; parseReceiptFile/recheckReceiptFile functions preserved separately."
+}

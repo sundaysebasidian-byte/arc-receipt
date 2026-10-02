@@ -1,0 +1,59 @@
+Chains
+|
+Gas 
+< $0.01
+
+Blockchain
+
+Tokens
+
+Charts & stats
+
+API
+
+Other
+
+/
+Log in
+Transaction details
+Transfer 100.01 USDC to 
+0xA8...C4B3
+Details
+Token transfers
+User operations
+Internal txns
+Logs
+State
+Raw trace
+Filter
+Token	Token ID	From/To	Value
+
+USDC
+ERC-20
+Transfer
+		
+Bybit 2
+0xA8...C4B3
+	
+100.01
+$100
+Made with
+
+Scan, inspect, and analyze EVM based blockchains with Blockscout, a blockchain explorer for Ethereum networks.
+
+Backend: v11.3.2
+
+Frontend: v2.11.3
+
+Copyright © Blockscout Limited 2023-2026
+
+This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+Contribute
+PRO API
+Autoscout
+Docs
+X
+Discord
+All chains
+
+Arc Mainnet transaction 0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a | Blockscout

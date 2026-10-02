@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-01T15:58:55.325Z",
+  "checkedAt": "2026-10-02T12:00:12.193Z",
   "checks": [
     {
       "case": "Initial desktop and server allowlist",
@@ -20,14 +20,18 @@
     {
       "case": "Real mainnet exact receipt, six explicit checks, Arc one-block default",
       "source": "actual_public_rpc",
-      "tx": "0xa1d4b142cdd89abccc7524db878774661e678c8538a732c79f36588e0c58bf07"
+      "tx": "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a"
     },
     {
       "case": "Readable HTML receipt with full identifiers and trust boundary",
       "source": "actual_public_rpc"
     },
     {
-      "case": "Movement drill-down counts canonical stream once",
+      "case": "Real native-only raw units do not invent an ERC20 mirror",
+      "source": "actual_public_rpc"
+    },
+    {
+      "case": "Movement drill-down shows one canonical native-only transfer",
       "source": "actual_public_rpc"
     },
     {
@@ -39,12 +43,20 @@
       "source": "modified_saved_claims_then_actual_public_rpc"
     },
     {
-      "case": "Real successful transaction forwards all funds; never shown paid",
+      "case": "Real normal swap intermediary has incoming and outgoing, zero net and no invoice conclusion",
       "source": "actual_public_rpc",
       "tx": "0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8"
     },
     {
+      "case": "Real normal swap zero-net equation and18/6 precision pairs",
+      "source": "actual_public_rpc"
+    },
+    {
       "case": "390px mobile real mainnet receipt and viewport screenshots",
+      "source": "actual_public_rpc"
+    },
+    {
+      "case": "390px precision trace has exact raw units with no overflow",
       "source": "actual_public_rpc"
     },
     {
@@ -76,6 +88,10 @@
       "source": "injected_abnormal_rpc_fixture"
     },
     {
+      "case": "Native-only explanation does not invent a paired ERC20 event",
+      "source": "replayed_public_evidence_fixture"
+    },
+    {
       "case": "Conflicting ERC20/native stream refused in UI",
       "source": "injected_abnormal_rpc_fixture"
     },
@@ -84,12 +100,24 @@
       "source": "injected_http_429"
     },
     {
+      "case": "Retry from a failure clears the error and recomputes the matching receipt",
+      "source": "replayed_public_evidence_fixture"
+    },
+    {
+      "case": "Loading is visible with disabled submit and a cancel action",
+      "source": "injected_delayed_transport"
+    },
+    {
       "case": "Cancellation prevents delayed response from rendering stale receipt",
       "source": "injected_delayed_transport"
     },
     {
       "case": "Editing during receipt-file read prevents stale import takeover",
       "source": "injected_delayed_local_file_read"
+    },
+    {
+      "case": "RPC request shapes include transaction hash/block queries only; no recipient or expected-amount parameter",
+      "source": "all_observed_request_shapes"
     },
     {
       "case": "Only four read RPC methods, no wallet/write calls or runtime errors",

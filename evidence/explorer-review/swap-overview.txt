@@ -1,0 +1,132 @@
+Chains
+|
+Gas 
+< $0.01
+
+Blockchain
+
+Tokens
+
+Charts & stats
+
+API
+
+Other
+
+/
+Log in
+Transaction details
+Swap 0.013 
+cirBTC
+for 1,458.03 
+USDC
+Details
+Token transfers
+User operations
+Internal txns
+Logs
+State
+Raw trace
+Transaction hash
+0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8
+Status and method
+Success
+0x14cfc5cb
+Block
+23560813
+|
+277068 Block confirmations
+Timestamp
+2d ago
+|
+Local
+UTC
+Unix
+Sep 30 2026 11:33:16 (-04:00 UTC)
+|
+Confirmed within <= 0.51 secs
+From
+0x870C73C98A14b6956b79247e1a1CDC68BA0060ee
+Interacted with contract
+0xC0eCEf8CB7B3438e3c86F45B524E505931aE4Ed2
+Tokens transferred
+0x87...60ee
+0xC0...4Ed2
+for 
+0.01287168
+cirBTC
+(
+$1,107.52
+)
+0xC0...4Ed2
+GiverPositionManager
+for 
+0.01287168
+cirBTC
+(
+$1,107.52
+)
+GiverPositionManager
+HubInstance
+for 
+0.01287168
+cirBTC
+(
+$1,107.52
+)
+HubInstance
+TakerPositionManager
+for 
+1,458.033036
+USDC
+(
+$1,457.83
+)
+TakerPositionManager
+0xC0...4Ed2
+for 
+1,458.033036
+USDC
+(
+$1,457.83
+)
+0xC0...4Ed2
+0x87...60ee
+for 
+1,458.033036
+USDC
+(
+$1,457.83
+)
+Value
+0
+ USDC
+(
+$0
+)
+Transaction fee
+0.0111247068
+ USDC
+(
+$0.01
+)
+View details
+View details
+Made with
+
+Scan, inspect, and analyze EVM based blockchains with Blockscout, a blockchain explorer for Ethereum networks.
+
+Backend: v11.3.2
+
+Frontend: v2.11.3
+
+Copyright © Blockscout Limited 2023-2026
+
+This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+Contribute
+PRO API
+Autoscout
+Docs
+X
+Discord
+All chains

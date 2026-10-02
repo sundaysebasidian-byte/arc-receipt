@@ -1,0 +1,119 @@
+{
+  "checkedAt": "2026-10-02T12:02:53.362992+00:00",
+  "state": "validated_local_boundary_fix_candidate",
+  "baseCommit": "01ca161f25ea71ba6e4f28b64d7d2d934d553cf6",
+  "includedHelpCommit": "d9f2738de847dff7ccf222aa6b43f60f72fc0ffa",
+  "passed": true,
+  "checks": {
+    "unitTests": 105,
+    "newOrderRegressionTests": 6,
+    "browserChecks": 30,
+    "uiChecks": 21,
+    "singleWorkflows": 4,
+    "singleWorkflowActualReads": 20,
+    "batchChecks": 9,
+    "batchActualReads": 13,
+    "orderChecks": 12,
+    "orderActualReads": 16,
+    "boundaryActualReads": 4,
+    "HTMLWidths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "externalOfflineChecks": 26,
+    "externalOfflineFailures": 0
+  },
+  "candidateRuntimeFiles": {
+    "index.html": "57a65387f74bb2dd58fa08e19ce3a5b5e579aa636b4833aad06e48d4908f65a5",
+    "sample.mjs": "247ea67da26cab38483f51b0b52d871bc07370cd02cb981f71b5f4b92d99aff2",
+    "batch-ui.mjs": "6620c0ba88a489f4adafc72b5f3605f93fc160187fc004d02f6a66b495cfd948",
+    "orders.mjs": "7dbcbf466f207de6043d30822e02b6520ee31ebd72364944e2794c69605b6e75",
+    "orders-ui.mjs": "0b4b925ca1d189d93e47c2c629f433d229541f7d0273a939e87f1f733d72bfc6",
+    "_headers": "30ccc341e658f4348b8bd041db475c7cce513d1699307f438db1dc2248df6868",
+    "batch.mjs": "bbfb61627de9edfe75a377321e2b28e0d79ecb05b3678a7139196bd2e1cc80e9",
+    "style.css": "eb59990184d9f77e6b61487a7e54b3808e3e2852dd26d504ec831dfe9731348b",
+    "app.mjs": "9d494796c86359a9488004b16a9cbf1c3a9b564ae21a25624fac483973b812d4",
+    "live-example.mjs": "e7cc85d92a58f5fc71d3a3c924b0975b80e629e8325a5ee3ea8c9172d8f059eb",
+    "verifier.mjs": "69df7e8b02b481f8ca0f8bf4ee540a7d978c3b17b378f976e01c7d5b7dd6e1d4",
+    "receipt.mjs": "4ae07522d6fe48dce6ed0b8fbdca6a6dac81c070aeffef223d6778c2f1332ddc"
+  },
+  "acceptanceRuntimeFiles": {
+    "index.html": "57a65387f74bb2dd58fa08e19ce3a5b5e579aa636b4833aad06e48d4908f65a5",
+    "sample.mjs": "247ea67da26cab38483f51b0b52d871bc07370cd02cb981f71b5f4b92d99aff2",
+    "batch-ui.mjs": "6620c0ba88a489f4adafc72b5f3605f93fc160187fc004d02f6a66b495cfd948",
+    "orders.mjs": "7dbcbf466f207de6043d30822e02b6520ee31ebd72364944e2794c69605b6e75",
+    "orders-ui.mjs": "0b4b925ca1d189d93e47c2c629f433d229541f7d0273a939e87f1f733d72bfc6",
+    "_headers": "30ccc341e658f4348b8bd041db475c7cce513d1699307f438db1dc2248df6868",
+    "batch.mjs": "bbfb61627de9edfe75a377321e2b28e0d79ecb05b3678a7139196bd2e1cc80e9",
+    "style.css": "eb59990184d9f77e6b61487a7e54b3808e3e2852dd26d504ec831dfe9731348b",
+    "app.mjs": "9d494796c86359a9488004b16a9cbf1c3a9b564ae21a25624fac483973b812d4",
+    "live-example.mjs": "e7cc85d92a58f5fc71d3a3c924b0975b80e629e8325a5ee3ea8c9172d8f059eb",
+    "verifier.mjs": "69df7e8b02b481f8ca0f8bf4ee540a7d978c3b17b378f976e01c7d5b7dd6e1d4",
+    "receipt.mjs": "4ae07522d6fe48dce6ed0b8fbdca6a6dac81c070aeffef223d6778c2f1332ddc"
+  },
+  "workingTreeRuntimeFiles": {
+    "index.html": "7eae37713a5dcd20dbff686a045843d2805084f811bd2225433e7b972ce022d6",
+    "sample.mjs": "247ea67da26cab38483f51b0b52d871bc07370cd02cb981f71b5f4b92d99aff2",
+    "batch-ui.mjs": "6620c0ba88a489f4adafc72b5f3605f93fc160187fc004d02f6a66b495cfd948",
+    "orders.mjs": "7dbcbf466f207de6043d30822e02b6520ee31ebd72364944e2794c69605b6e75",
+    "orders-ui.mjs": "0b4b925ca1d189d93e47c2c629f433d229541f7d0273a939e87f1f733d72bfc6",
+    "_headers": "30ccc341e658f4348b8bd041db475c7cce513d1699307f438db1dc2248df6868",
+    "batch.mjs": "bbfb61627de9edfe75a377321e2b28e0d79ecb05b3678a7139196bd2e1cc80e9",
+    "style.css": "eb59990184d9f77e6b61487a7e54b3808e3e2852dd26d504ec831dfe9731348b",
+    "app.mjs": "9d494796c86359a9488004b16a9cbf1c3a9b564ae21a25624fac483973b812d4",
+    "live-example.mjs": "e7cc85d92a58f5fc71d3a3c924b0975b80e629e8325a5ee3ea8c9172d8f059eb",
+    "verifier.mjs": "69df7e8b02b481f8ca0f8bf4ee540a7d978c3b17b378f976e01c7d5b7dd6e1d4",
+    "receipt.mjs": "4ae07522d6fe48dce6ed0b8fbdca6a6dac81c070aeffef223d6778c2f1332ddc"
+  },
+  "runtimeComparison": "Generated index footer differs intentionally from working tree. All ten acceptance commands used extracted candidate bytes; runtime did not change during checks.",
+  "priorExternalReview": "Two functional findings plus single-help scope issue; previous three batch findings independently confirmed fixed. New candidate has not yet had external third-party retest.",
+  "currentExternalThirdPartyRetest": false,
+  "fixes": {
+    "invalidAddressConflict": {
+      "method": "Recognize normalized valid hash independently; unknown address/order assignments conservatively block repeated hashes before RPC.",
+      "exactFixture": "evidence/independent-invalid-address-conflict.csv",
+      "fixtureSHA256": "d694821384ca6a162937b81b1640dee282e75c5b28b422dfed603993dabcc0dc",
+      "observedUI": "Both allocations blocked in preview, run disabled, zero RPC."
+    },
+    "extraOnlyRecord": {
+      "method": "Count/filter all original values before known-column projection. Preserve fieldError and extraFields through run/bundle/recomputation.",
+      "exactFixture": "evidence/independent-extra-only-records.csv",
+      "fixtureSHA256": "28d973f25838cd7adae4ca2d5e07ed02ffed48eb4cd62eb41607623a3f754400",
+      "observedUI": "One extra-only invalid row shown unassigned;21 nonempty records rejected and previous file retained."
+    },
+    "helpScope": "Single receipt does not aggregate other transactions; order mode sums user-assigned net observations, not commercial settlement proof."
+  },
+  "regressionScope": "Six new unit cases include exact reported files, missing/zero/invalid addresses across/same orders, unassigned IDs, extra preservation,20/21 bound and tampered descriptors/byte bound. Reviewer26-check script reused with only local import/input/output path adaptation.",
+  "evidenceSources": "Genuine public examples and separately labelled replay/fault injection. Extra boundary UI cases are local/replay. No real customer invoices or user-research claim.",
+  "sourceEvidence": [
+    "evidence/order-candidate-runs.json",
+    "evidence/order-validation.json",
+    "evidence/external-order-offline-results.json",
+    "evidence/export-render-qa.json",
+    "evidence/order-independent-audit.json"
+  ],
+  "corePreservation": {
+    "baselineCommit": "8ca9ac34030bc07767f9479c53fab5c71ce27884",
+    "verifierByteIdentical": true,
+    "unchangedImportFunctions": {
+      "parseReceiptFile": "f0ebe936f46c58b4d52c00221a4a83eec581f4932280f59d64d720d64cfd4a7b",
+      "recheckReceiptFile": "050e8bdeef399eefc9e41453aa2fec631346fdd6d7bbbd83c0f102119d8fb5d7"
+    },
+    "wholeReceiptModuleByteIdentical": false,
+    "intentionallyChanged": "Readable HTML wrapping; batch descriptor validation/pacing, order modules, UI and relevant tests/docs. No claim the entire receipt module stayed identical."
+  },
+  "priorFrozenPackagesUnchanged": {
+    "arc-pages-assets.zip": "d5f01830b429cdc1b40917f3a2a13006de95ce129e5a46588a06f266996cca76",
+    "arc-public-source.zip": "5723ff81d3b2a415ce556efeb4f2c28a0bf4e7c293ad15c7fc06d98c347d864c"
+  },
+  "priorFrozenReviewZIPUnchanged": "09fa1176956e6681b2d3864b3fca931146b2c83fd5f0c49fd28a9f466e3e0554",
+  "originalVideoUnchanged": true,
+  "published": false,
+  "organizerContacted": false,
+  "applicationSubmitted": false,
+  "walletWrites": 0,
+  "trust": "Unsigned single-provider observation; order association supplied by reviewer. No commercial settlement, control, intent, output allocation or cross-file reuse proof.",
+  "remaining": "External review of this new frozen package; read-only qualification; publication/hosting approval; applicant rights/prior funding/jurisdiction/KYC; independent real-world usefulness validation."
+}

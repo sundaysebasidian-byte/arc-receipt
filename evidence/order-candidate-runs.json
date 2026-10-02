@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "case": "unit",
+      "startedAt": "2026-10-02T11:59:58.361521+00:00",
+      "finishedAt": "2026-10-02T11:59:58.506853+00:00",
+      "exitCode": 0
+    },
+    {
+      "case": "browser",
+      "startedAt": "2026-10-02T11:59:58.507276+00:00",
+      "finishedAt": "2026-10-02T12:00:12.318498+00:00",
+      "exitCode": 0
+    },
+    {
+      "case": "ui",
+      "startedAt": "2026-10-02T12:00:12.319124+00:00",
+      "finishedAt": "2026-10-02T12:00:13.943310+00:00",
+      "exitCode": 0
+    },
+    {
+      "case": "workflow",
+      "startedAt": "2026-10-02T12:00:13.943739+00:00",
+      "finishedAt": "2026-10-02T12:00:23.045143+00:00",
+      "exitCode": 0
+    },
+    {
+      "case": "batch",
+      "startedAt": "2026-10-02T12:00:23.045459+00:00",
+      "finishedAt": "2026-10-02T12:00:31.867842+00:00",
+      "exitCode": 0
+    },
+    {
+      "case": "order",
+      "startedAt": "2026-10-02T12:00:31.868137+00:00",
+      "finishedAt": "2026-10-02T12:00:42.992478+00:00",
+      "exitCode": 0
+    },
+    {
+      "case": "boundary",
+      "startedAt": "2026-10-02T12:00:42.992982+00:00",
+      "finishedAt": "2026-10-02T12:00:46.698813+00:00",
+      "exitCode": 0
+    },
+    {
+      "case": "html",
+      "startedAt": "2026-10-02T12:00:46.699084+00:00",
+      "finishedAt": "2026-10-02T12:00:47.811365+00:00",
+      "exitCode": 0
+    },
+    {
+      "case": "raw-system-audit",
+      "startedAt": "2026-10-02T12:00:47.811686+00:00",
+      "finishedAt": "2026-10-02T12:00:47.839539+00:00",
+      "exitCode": 0
+    },
+    {
+      "case": "external-offline",
+      "startedAt": "2026-10-02T12:00:47.839741+00:00",
+      "finishedAt": "2026-10-02T12:00:47.879766+00:00",
+      "exitCode": 0
+    }
+  ],
+  "runtimeBefore": {
+    "index.html": "57a65387f74bb2dd58fa08e19ce3a5b5e579aa636b4833aad06e48d4908f65a5",
+    "sample.mjs": "247ea67da26cab38483f51b0b52d871bc07370cd02cb981f71b5f4b92d99aff2",
+    "batch-ui.mjs": "6620c0ba88a489f4adafc72b5f3605f93fc160187fc004d02f6a66b495cfd948",
+    "orders.mjs": "7dbcbf466f207de6043d30822e02b6520ee31ebd72364944e2794c69605b6e75",
+    "orders-ui.mjs": "0b4b925ca1d189d93e47c2c629f433d229541f7d0273a939e87f1f733d72bfc6",
+    "_headers": "30ccc341e658f4348b8bd041db475c7cce513d1699307f438db1dc2248df6868",
+    "batch.mjs": "bbfb61627de9edfe75a377321e2b28e0d79ecb05b3678a7139196bd2e1cc80e9",
+    "style.css": "eb59990184d9f77e6b61487a7e54b3808e3e2852dd26d504ec831dfe9731348b",
+    "app.mjs": "9d494796c86359a9488004b16a9cbf1c3a9b564ae21a25624fac483973b812d4",
+    "live-example.mjs": "e7cc85d92a58f5fc71d3a3c924b0975b80e629e8325a5ee3ea8c9172d8f059eb",
+    "verifier.mjs": "69df7e8b02b481f8ca0f8bf4ee540a7d978c3b17b378f976e01c7d5b7dd6e1d4",
+    "receipt.mjs": "4ae07522d6fe48dce6ed0b8fbdca6a6dac81c070aeffef223d6778c2f1332ddc"
+  },
+  "scope": "Extracted separate generated boundary-fix candidate; one headless worker, existing dependency only. No publication or transactions."
+}

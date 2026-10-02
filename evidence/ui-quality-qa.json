@@ -1,0 +1,132 @@
+{
+  "checkedAt": "2026-10-02T12:00:13.873Z",
+  "passed": true,
+  "checks": [
+    {
+      "case": "Core verifier, synthetic fixture and security headers match the frozen reviewed baseline byte for byte",
+      "source": "local_sha256",
+      "commit": "82bae7bdb7d5891f8756c82ca8140ed58f46efe0"
+    },
+    {
+      "case": "The complete-check entry and empty-result explanation are both visible on a1440x1000 initial viewport",
+      "source": "local_first_viewport"
+    },
+    {
+      "case": "Mobile empty-state content fits its natural container without overlapping following sections",
+      "source": "local_initial_mobile_layout"
+    },
+    {
+      "case": "Keyboard skip link appears on focus and reaches payment inputs",
+      "source": "local_keyboard"
+    },
+    {
+      "case": "Unique IDs, associated input labels and polite status announcements",
+      "source": "local_semantics"
+    },
+    {
+      "case": "Long Chinese transaction input is rejected before RPC and does not overflow",
+      "source": "local_invalid_input_stress"
+    },
+    {
+      "case": "Observation policy disclosure remains keyboard operable",
+      "source": "local_keyboard"
+    },
+    {
+      "case": "Decision guide opens by keyboard and preserves independent invoice review",
+      "source": "local_keyboard"
+    },
+    {
+      "case": "Selected small text, primary action and placeholder contrast at least 4.5:1",
+      "source": "computed_css_sample",
+      "ratios": {
+        ".primary": 6.08,
+        ".panel-intro": 6.02,
+        ".privacy": 5.65,
+        ".hint": 6.02,
+        ".hero-note p": 6.02,
+        ".hero-note a": 7.54,
+        ".empty p": 6.02,
+        "label": 11.32,
+        "placeholder": 4.75
+      },
+      "limit": "Selected opaque text colors only; not a complete WCAG audit."
+    },
+    {
+      "case": "The first-review entry is keyboard operable and uses the existing public transaction route",
+      "source": "local_keyboard_with_replayed_public_fixture"
+    },
+    {
+      "case": "The exact selected address and expected transaction net are visible before the result amount",
+      "source": "local_layout_with_replayed_public_fixture"
+    },
+    {
+      "case": "The result offers saved-file recheck beside exports and distinguishes it from live recheck",
+      "source": "local_semantics_with_replayed_public_fixture"
+    },
+    {
+      "case": "Without expected net the UI reports an observation, not invoice reconciliation",
+      "source": "replayed_public_fixture"
+    },
+    {
+      "case": "Zero retained payment keeps warning status and a distinct summary tone",
+      "source": "replayed_public_fixture"
+    },
+    {
+      "case": "Synthetic example retains an explicit warning, distinct styling and no saved-file chain-recheck action",
+      "source": "synthetic_offline_fixture"
+    },
+    {
+      "case": "Copy actions provide complete recipient and transaction values without changing the OS clipboard",
+      "source": "injected_local_clipboard_api_with_synthetic_fixture"
+    },
+    {
+      "case": "Expanded raw precision trace fits 320/390/768/1024/1440px layouts",
+      "source": "local_responsive_with_replayed_fixture"
+    },
+    {
+      "case": "Long Chinese explanation wraps at320px without truncation or horizontal overflow",
+      "source": "injected_local_text_layout_stress",
+      "limit": "The product language remains English; this is layout stress, not a localization claim."
+    },
+    {
+      "case": "Thirteen mobile actions have at least44px height; payment inputs use 16px text",
+      "source": "computed_mobile_css",
+      "sizes": {
+        "start-review": 48,
+        "verify": 46,
+        "live-example": 75.140625,
+        "difference-example": 75.140625,
+        "roundtrip-example": 75.140625,
+        "sample": 44,
+        "import": 44,
+        "download-readable": 48,
+        "download": 48,
+        "copy-recipient": 44,
+        "copy-hash": 44,
+        "recheck": 44,
+        "import-result": 44
+      }
+    },
+    {
+      "case": "Reduced motion keeps scrolling immediate and disables transitions",
+      "source": "prefers_reduced_motion"
+    },
+    {
+      "case": "No external fonts/assets/analytics, wallet calls or runtime errors",
+      "source": "all_observed_requests_with_intercepted_rpc"
+    }
+  ],
+  "errors": [],
+  "resources": [
+    "http://127.0.0.1:4327",
+    "https://rpc.mainnet.arc.io"
+  ],
+  "rpcMethods": [
+    "eth_chainId",
+    "eth_getTransactionReceipt",
+    "eth_getBlockByNumber",
+    "eth_blockNumber"
+  ],
+  "source": "Local UI and explicit public evidence replay; genuine RPC acceptance is recorded separately in browser-qa.json",
+  "fullAccessibilityCertification": false
+}

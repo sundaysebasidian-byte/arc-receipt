@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-02T12:00:47.737Z",
+  "source": "current_HTML_generator_with_actual_saved_public_RPC_evidence",
+  "transaction": "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a",
+  "passed": true,
+  "checks": [
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "fullIdentifiers": true,
+      "scriptCount": 0,
+      "externalRequests": 0
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "fullIdentifiers": true,
+      "scriptCount": 0,
+      "externalRequests": 0
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "fullIdentifiers": true,
+      "scriptCount": 0,
+      "externalRequests": 0
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "fullIdentifiers": true,
+      "scriptCount": 0,
+      "externalRequests": 0
+    }
+  ],
+  "scriptCount": 0,
+  "externalRequests": 0,
+  "noHorizontalOverflow": true
+}

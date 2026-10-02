@@ -1,0 +1,112 @@
+{
+  "checkedAt": "2026-10-02T12:00:47.877Z",
+  "scope": "Independent offline public-evidence replay; no chain queries",
+  "checks": [
+    {
+      "name": "Original external 100000-byte CSV now runs unchanged",
+      "status": "pass"
+    },
+    {
+      "name": "100000-byte order file runs; 100001 bytes rejected",
+      "status": "pass"
+    },
+    {
+      "name": "20 order payment records accepted; 21 rejected",
+      "status": "pass"
+    },
+    {
+      "name": "Order IDs case-sensitive, whitespace trimmed, total counted once",
+      "status": "pass"
+    },
+    {
+      "name": "Aggregate one-wei difference under",
+      "status": "pass"
+    },
+    {
+      "name": "Aggregate one-wei difference over",
+      "status": "pass"
+    },
+    {
+      "name": "Split demo exact sum, duplicate counted once, missing order incomplete",
+      "status": "pass"
+    },
+    {
+      "name": "Normalized repeated input counted once even equivalent amount spelling",
+      "status": "pass"
+    },
+    {
+      "name": "Cross-order valid hash allocation blocked before RPC; independent order continues",
+      "status": "pass"
+    },
+    {
+      "name": "Same hash at two valid addresses blocked within same order",
+      "status": "pass"
+    },
+    {
+      "name": "Invalid total cannot hide hash allocated to second order",
+      "status": "pass"
+    },
+    {
+      "name": "Invalid address cannot hide hash allocated to second order",
+      "status": "pass"
+    },
+    {
+      "name": "Conflicting totals stay blocked, with no repeated total comparison",
+      "status": "pass"
+    },
+    {
+      "name": "Partial failure retains net equal to total but withholds match",
+      "status": "pass"
+    },
+    {
+      "name": "Cancellation retains net equal to total but withholds complete match",
+      "status": "pass"
+    },
+    {
+      "name": "rate_limited stops later orders",
+      "status": "pass"
+    },
+    {
+      "name": "wrong_chain stops later orders",
+      "status": "pass"
+    },
+    {
+      "name": "Zero route remains visible and incomplete is not merchant debt",
+      "status": "pass"
+    },
+    {
+      "name": "Malformed extra fields remain invalid in run and saved bundle",
+      "status": "pass"
+    },
+    {
+      "name": "Nonempty extra-only malformed record is retained as invalid",
+      "status": "pass"
+    },
+    {
+      "name": "Extra-only nonempty records count toward 20-row limit",
+      "status": "pass"
+    },
+    {
+      "name": "CSV preserves repeated matched exceptions and demo truth labels",
+      "status": "pass"
+    },
+    {
+      "name": "Formula-like order ID escapes as spreadsheet literal",
+      "status": "pass"
+    },
+    {
+      "name": "Order bundle recomputation ignores altered summaries and receipt amounts",
+      "status": "pass"
+    },
+    {
+      "name": "Synthetic saved receipt cannot contribute to a complete order",
+      "status": "pass"
+    },
+    {
+      "name": "Individual order receipt has no injected expectation and rechecks consistently",
+      "status": "pass"
+    }
+  ],
+  "passed": 26,
+  "failed": 0
+}

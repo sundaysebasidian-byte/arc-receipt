@@ -1,11 +1,19 @@
-# Static deployment instructions
+# GitHub Pages deployment
 
-This folder is a candidate, not an existing deployment. No credentials are included. The owner approved publication of this source repository under MIT at https://github.com/sundaysebasidian-byte/arc-receipt. Website hosting, its account/terms, and external organizer contact require separate authorization. This script does not publish anything.
+Public demo: https://sundaysebasidian-byte.github.io/arc-receipt/
 
-1. Run `python3 scripts/prepare-publication.py`. Keep `release/pages/` or `release/arc-pages-assets.zip` for Cloudflare Pages Free Direct Upload. It contains exactly eight files at the ZIP root, with no backend or Functions.
-2. After publication approval, the owner can upload that ZIP/folder in the Cloudflare dashboard following https://developers.cloudflare.com/pages/get-started/direct-upload/. Registration/login or new terms remain owner controlled. Estimated free static hosting is $0/month; no paid domain or verification gas is required. Free-plan/RPC limits may change.
-3. Optional CLI route after approval: install or invoke the official pinned `wrangler@4.145.0` (Node >=22), complete owner-controlled login, choose the exact approved account/project, then `node scripts/deploy-pages.mjs --project YOUR_PROJECT --account APPROVED_ACCOUNT_ID --publish-approved`. The default invocation only prints instructions. The script does not create a project or log in. If Wrangler requests a new account/project or terms unexpectedly, stop for the owner.
-4. In a fresh source checkout, create a new Git repository and upload only this source candidate to the approved GitHub destination. Do not upload an older local Git history.
-5. Verify the deployed root URL loads, the eight runtime assets return successful responses, _headers were applied, and the browser can read the official Arc RPC. Re-run both public examples and download/reimport evidence. Never treat successful hosting as grant qualification.
+The site uses the existing public MIT repository, `main` branch, `/docs` publishing folder and GitHub's built-in Pages build/deployment. No custom Actions permissions, new hosting account, custom domain or paid resource is required.
 
-Direct Upload cannot later be switched into Git integration without a new project. Wrangler accepts a folder; the dashboard accepts a folder or ZIP. Ordinary GitHub Pages project subpaths require URL adjustment because runtime assets currently use root-relative paths.
+1. Run `npm test` for the 105 offline tests.
+2. Run `node scripts/build-github-pages.mjs`. This copies the eleven browser assets and generates `.nojekyll` plus the asset manifest in `docs/`. Module and CSS bytes are preserved. The HTML uses relative asset links, an early CSP meta tag and a no-referrer meta tag.
+3. Commit the reviewed source and generated `docs/` assets on `main`, preserving public history. Do not upload private development history, credentials or grant application material.
+4. Repository Settings → Pages → Deploy from a branch → `main` → `/docs`. This is already the selected deployment target for this repository; subsequent pushes publish changes through GitHub's built-in Pages workflow.
+5. Check the Pages workflow commit, fetch the public manifest/assets, and verify the single-transaction, batch, order, error and evidence-export flows in a fresh browser.
+
+GitHub Pages ignores the alternative Cloudflare `web/_headers` file. Meta CSP cannot provide `frame-ancestors` or `X-Content-Type-Options`; no equivalent header claim is made. The app uses only https://rpc.mainnet.arc.io for public chain reads. CSV files, addresses, order labels and expected amounts stay in browser memory.
+
+Running `scripts/prepare-publication.py` produces separate offline/Cloudflare candidates; it does not rebuild or publish the GitHub Pages folder. `scripts/deploy-pages.mjs` is the optional Cloudflare helper and defaults to instructions only.
+
+Hosting is a public demonstration of software, not confirmation of grant eligibility. No grant application, organizer contact, wallet operation or chain transaction is part of this deployment.
+
+References: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site

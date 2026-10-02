@@ -1,0 +1,10 @@
+{
+  "baselineCommit": "8ca9ac34030bc07767f9479c53fab5c71ce27884",
+  "verifierByteIdentical": true,
+  "unchangedImportFunctions": {
+    "parseReceiptFile": "f0ebe936f46c58b4d52c00221a4a83eec581f4932280f59d64d720d64cfd4a7b",
+    "recheckReceiptFile": "050e8bdeef399eefc9e41453aa2fec631346fdd6d7bbbd83c0f102119d8fb5d7"
+  },
+  "wholeReceiptModuleByteIdentical": false,
+  "intentionallyChanged": "Readable HTML wrapping; batch descriptor validation/pacing, order modules, UI and relevant tests/docs. No claim the entire receipt module stayed identical."
+}

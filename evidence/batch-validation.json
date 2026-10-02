@@ -1,0 +1,205 @@
+{
+  "checkedAt": "2026-10-02T12:00:31.768Z",
+  "passed": true,
+  "checks": [
+    {
+      "case": "Keyboard entry, five-record preview and duplicate detection before any RPC request",
+      "source": "local_input"
+    },
+    {
+      "case": "Genuine batch: exact/above/below, repeated input and missing receipt; shared evidence and paced requests",
+      "source": "actual_public_rpc",
+      "reads": 9,
+      "minObservedRequestGapMs": 358
+    },
+    {
+      "case": "Actual exception export retains four exception records and zero-net context",
+      "source": "actual_public_rpc_export"
+    },
+    {
+      "case": "Batch results fit320/390/768/1440px and five main batch actions meet44px height",
+      "source": "local_layout_with_actual_results"
+    },
+    {
+      "case": "Actual batch row reuses the single receipt export and saved-file recompute/fresh-recheck path",
+      "source": "actual_public_rpc",
+      "extraReads": 4
+    },
+    {
+      "case": "Bad replacement CSV reports the header problem and retains the prior batch",
+      "source": "local_invalid_file"
+    },
+    {
+      "case": "One invalid formula-like row survives alongside a good row; exception export prefixes it as literal text",
+      "source": "labelled_replay_and_local_csv"
+    },
+    {
+      "case": "Replayed429 stops extra requests and preserves the unqueried record",
+      "source": "injected_http429"
+    },
+    {
+      "case": "Cancellation aborts in-flight observation, retains both records and restores single-review controls",
+      "source": "injected_delayed_rpc"
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "source": "actual_public_rpc",
+      "at": 1790942423861,
+      "method": "eth_chainId",
+      "params": []
+    },
+    {
+      "source": "actual_public_rpc",
+      "at": 1790942425528,
+      "method": "eth_getTransactionReceipt",
+      "params": [
+        "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a"
+      ]
+    },
+    {
+      "source": "actual_public_rpc",
+      "at": 1790942425886,
+      "method": "eth_getBlockByNumber",
+      "params": [
+        "0x16bb728",
+        false
+      ]
+    },
+    {
+      "source": "actual_public_rpc",
+      "at": 1790942426247,
+      "method": "eth_blockNumber",
+      "params": []
+    },
+    {
+      "source": "actual_public_rpc",
+      "at": 1790942426609,
+      "method": "eth_getTransactionReceipt",
+      "params": [
+        "0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8"
+      ]
+    },
+    {
+      "source": "actual_public_rpc",
+      "at": 1790942426969,
+      "method": "eth_getBlockByNumber",
+      "params": [
+        "0x167826d",
+        false
+      ]
+    },
+    {
+      "source": "actual_public_rpc",
+      "at": 1790942427330,
+      "method": "eth_blockNumber",
+      "params": []
+    },
+    {
+      "source": "actual_public_rpc",
+      "at": 1790942427689,
+      "method": "eth_blockNumber",
+      "params": []
+    },
+    {
+      "source": "actual_public_rpc",
+      "at": 1790942428050,
+      "method": "eth_getTransactionReceipt",
+      "params": [
+        "0x0000000000000000000000000000000000000000000000000000000000000000"
+      ]
+    },
+    {
+      "source": "actual_public_rpc",
+      "at": 1790942428739,
+      "method": "eth_chainId",
+      "params": []
+    },
+    {
+      "source": "actual_public_rpc",
+      "at": 1790942428981,
+      "method": "eth_getTransactionReceipt",
+      "params": [
+        "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a"
+      ]
+    },
+    {
+      "source": "actual_public_rpc",
+      "at": 1790942429199,
+      "method": "eth_getBlockByNumber",
+      "params": [
+        "0x16bb728",
+        false
+      ]
+    },
+    {
+      "source": "actual_public_rpc",
+      "at": 1790942429501,
+      "method": "eth_blockNumber",
+      "params": []
+    },
+    {
+      "source": "labelled_replay",
+      "at": 1790942430124,
+      "method": "eth_chainId",
+      "params": []
+    },
+    {
+      "source": "labelled_replay",
+      "at": 1790942430484,
+      "method": "eth_getTransactionReceipt",
+      "params": [
+        "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a"
+      ]
+    },
+    {
+      "source": "labelled_replay",
+      "at": 1790942430846,
+      "method": "eth_getBlockByNumber",
+      "params": [
+        "0x16bb728",
+        false
+      ]
+    },
+    {
+      "source": "labelled_replay",
+      "at": 1790942431207,
+      "method": "eth_blockNumber",
+      "params": []
+    },
+    {
+      "source": "labelled_replay",
+      "at": 1790942431308,
+      "method": "eth_chainId",
+      "params": []
+    },
+    {
+      "source": "labelled_replay",
+      "at": 1790942431374,
+      "method": "eth_chainId",
+      "params": []
+    },
+    {
+      "source": "labelled_replay",
+      "at": 1790942431737,
+      "method": "eth_getTransactionReceipt",
+      "params": [
+        "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a"
+      ]
+    }
+  ],
+  "resources": [
+    "http://127.0.0.1:4330",
+    "https://rpc.mainnet.arc.io"
+  ],
+  "actualPublicRPCReads": 13,
+  "maxRows": 20,
+  "maxCSVBytes": 100000,
+  "concurrency": 1,
+  "requestDelayMs": 350,
+  "writes": 0,
+  "published": false,
+  "scope": "Comparisons with user-supplied transaction-net expectations, not invoice settlement. Repeated input is not another on-chain payment.",
+  "sampleLimit": "Two existing public transactions; all-zero hash deliberately absent; not user earnings or known merchant receipts."
+}

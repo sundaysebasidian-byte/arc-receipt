@@ -1,0 +1,504 @@
+Chains
+|
+Gas 
+< $0.01
+
+Blockchain
+
+Tokens
+
+Charts & stats
+
+API
+
+Other
+
+/
+Log in
+Transaction details
+Swap 0.013 
+cirBTC
+for 1,458.03 
+USDC
+Details
+Token transfers
+User operations
+Internal txns
+Logs
+State
+Raw trace
+Address
+FiatTokenV2_2
+0
+Decode input data
+Method id
+ddf252ad
+Call
+Transfer(address indexed from, address indexed to, uint256 value)
+Name
+Type
+Indexed?
+Data
+from
+address
+true
+0x870C73C98A14b6956b79247e1a1CDC68BA0060ee
+to
+address
+true
+0xC0eCEf8CB7B3438e3c86F45B524E505931aE4Ed2
+value
+uint256
+false
+1287168
+Topics
+0
+0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1
+Hex
+Address
+Text
+Number
+Hex
+0x000000000000000000000000870c73c98a14b6956b79247e1a1cdc68ba0060ee
+2
+Hex
+Address
+Text
+Number
+Hex
+0x000000000000000000000000c0ecef8cb7b3438e3c86f45b524e505931ae4ed2
+Data
+0x000000000000000000000000000000000000000000000000000000000013a400
+Address
+FiatTokenV2_2
+1
+Decode input data
+Method id
+ddf252ad
+Call
+Transfer(address indexed from, address indexed to, uint256 value)
+Name
+Type
+Indexed?
+Data
+from
+address
+true
+0xC0eCEf8CB7B3438e3c86F45B524E505931aE4Ed2
+to
+address
+true
+0x01Da80Eef3004ebbF90b7637B1De7fF30fBc7cf1
+value
+uint256
+false
+1287168
+Topics
+0
+0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1
+Hex
+Address
+Text
+Number
+Hex
+0x000000000000000000000000c0ecef8cb7b3438e3c86f45b524e505931ae4ed2
+2
+Hex
+Address
+Text
+Number
+Hex
+0x00000000000000000000000001da80eef3004ebbf90b7637b1de7ff30fbc7cf1
+Data
+0x000000000000000000000000000000000000000000000000000000000013a400
+Address
+FiatTokenV2_2
+2
+Decode input data
+Method id
+8c5be1e5
+Call
+Approval(address indexed owner, address indexed spender, uint256 value)
+Name
+Type
+Indexed?
+Data
+owner
+address
+true
+0x01Da80Eef3004ebbF90b7637B1De7fF30fBc7cf1
+spender
+address
+true
+0xB843bdC3a87A05E77E07Df9FE48928b3A34b134d
+value
+uint256
+false
+1287168
+Topics
+0
+0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925
+1
+Hex
+Address
+Text
+Number
+Hex
+0x00000000000000000000000001da80eef3004ebbf90b7637b1de7ff30fbc7cf1
+2
+Hex
+Address
+Text
+Number
+Hex
+0x000000000000000000000000b843bdc3a87a05e77e07df9fe48928b3a34b134d
+Data
+0x000000000000000000000000000000000000000000000000000000000013a400
+Address
+FiatTokenV2_2
+3
+Decode input data
+Method id
+ddf252ad
+Call
+Transfer(address indexed from, address indexed to, uint256 value)
+Name
+Type
+Indexed?
+Data
+from
+address
+true
+0x01Da80Eef3004ebbF90b7637B1De7fF30fBc7cf1
+to
+address
+true
+0x17288dfc86205301064577b98B02b81017e6F79C
+value
+uint256
+false
+1287168
+Topics
+0
+0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1
+Hex
+Address
+Text
+Number
+Hex
+0x00000000000000000000000001da80eef3004ebbf90b7637b1de7ff30fbc7cf1
+2
+Hex
+Address
+Text
+Number
+Hex
+0x00000000000000000000000017288dfc86205301064577b98b02b81017e6f79c
+Data
+0x000000000000000000000000000000000000000000000000000000000013a400
+Address
+HubInstance
+4
+Decode input data
+Method id
+a1facf11
+Call
+UpdateAsset(uint256 indexed assetId, uint256 drawnIndex, uint256 drawnRate, uint256 accruedFees)
+Name
+Type
+Indexed?
+Data
+assetId
+uint256
+true
+2
+drawnIndex
+uint256
+false
+1000108693054261740003245678
+drawnRate
+uint256
+false
+2595472496815164497931677
+accruedFees
+uint256
+false
+4307
+Topics
+0
+0xa1facf110ded5028ee267fa3d5986f2aa4dc14230b79ffd27e95760f14883350
+1
+Hex
+Address
+Text
+Number
+Hex
+0x0000000000000000000000000000000000000000000000000000000000000002
+Data
+0x0000000000000000000000000000000000000000033b4540e2f52acecefdbe6e00000000000000000000000000000000000000000002259cd89262bed72d2d9d00000000000000000000000000000000000000000000000000000000000010d3
+Address
+HubInstance
+5
+Decode input data
+Method id
+119e7f99
+Call
+Restore(uint256 indexed assetId, address indexed spoke, uint256 drawnShares, (int256,int256,uint256) premiumDelta, uint256 drawnAmount, uint256 premiumAmount)
+Name
+Type
+Indexed?
+Data
+assetId
+uint256
+true
+2
+spoke
+address
+true
+0xB843bdC3a87A05E77E07Df9FE48928b3A34b134d
+drawnShares
+uint256
+false
+1287028
+premiumDelta
+(int256,int256,uint256)
+false
+[ "0", "0", "0" ]
+drawnAmount
+uint256
+false
+1287168
+premiumAmount
+uint256
+false
+0
+Topics
+0
+0x119e7f996dc987b3ae79eb3735f1620c4292f6a7761a1e0f834c445f7798b912
+1
+Hex
+Address
+Text
+Number
+Hex
+0x0000000000000000000000000000000000000000000000000000000000000002
+2
+Hex
+Address
+Text
+Number
+Hex
+0x000000000000000000000000b843bdc3a87a05e77e07df9fe48928b3a34b134d
+Data
+0x000000000000000000000000000000000000000000000000000000000013a374000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000013a4000000000000000000000000000000000000000000000000000000000000000000
+Address
+SpokeInstance
+6
+Decode input data
+Method id
+d765a026
+Call
+Repay(uint256 indexed reserveId, address indexed caller, address indexed user, uint256 drawnShares, uint256 totalAmountRepaid, (int256,int256,uint256) premiumDelta)
+Name
+Type
+Indexed?
+Data
+reserveId
+uint256
+true
+2
+caller
+address
+true
+0x01Da80Eef3004ebbF90b7637B1De7fF30fBc7cf1
+user
+address
+true
+0x870C73C98A14b6956b79247e1a1CDC68BA0060ee
+drawnShares
+uint256
+false
+1287028
+totalAmountRepaid
+uint256
+false
+1287168
+premiumDelta
+(int256,int256,uint256)
+false
+[ "0", "0", "0" ]
+Topics
+0
+0xd765a0263e8a360da8dd4fdb8c0dc5553adec12a96f29a462cdb45e5bea407dd
+1
+Hex
+Address
+Text
+Number
+Hex
+0x0000000000000000000000000000000000000000000000000000000000000002
+2
+Hex
+Address
+Text
+Number
+Hex
+0x00000000000000000000000001da80eef3004ebbf90b7637b1de7ff30fbc7cf1
+3
+Hex
+Address
+Text
+Number
+Hex
+0x000000000000000000000000870c73c98a14b6956b79247e1a1cdc68ba0060ee
+Data
+0x000000000000000000000000000000000000000000000000000000000013a374000000000000000000000000000000000000000000000000000000000013a400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Address
+GiverPositionManager
+7
+Decode input data
+Method id
+5583a9c6
+Call
+RepayOnBehalfOf(address indexed spoke, address indexed caller, address indexed onBehalfOf, uint256 reserveId, uint256 repaidShares, uint256 repaidAmount)
+Name
+Type
+Indexed?
+Data
+spoke
+address
+true
+0xB843bdC3a87A05E77E07Df9FE48928b3A34b134d
+caller
+address
+true
+0xC0eCEf8CB7B3438e3c86F45B524E505931aE4Ed2
+onBehalfOf
+address
+true
+0x870C73C98A14b6956b79247e1a1CDC68BA0060ee
+reserveId
+uint256
+false
+2
+repaidShares
+uint256
+false
+1287028
+repaidAmount
+uint256
+false
+1287168
+Topics
+0
+0x5583a9c669606ecca39b834015a4588f03b174f3e970cf7903f0d2c78f5e4e35
+1
+Hex
+Address
+Text
+Number
+Hex
+0x000000000000000000000000b843bdc3a87a05e77e07df9fe48928b3a34b134d
+2
+Hex
+Address
+Text
+Number
+Hex
+0x000000000000000000000000c0ecef8cb7b3438e3c86f45b524e505931ae4ed2
+3
+Hex
+Address
+Text
+Number
+Hex
+0x000000000000000000000000870c73c98a14b6956b79247e1a1cdc68ba0060ee
+Data
+0x0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000013a374000000000000000000000000000000000000000000000000000000000013a400
+To see accurate decoded input data, the contract must be verified.
+Verify the contract here
+Address
+0xC0eCEf8CB7B3438e3c86F45B524E505931aE4Ed2
+8
+Topics
+0
+0xf330f776ab2acc1eeb86798beb7ec2909e3e39bd8202a23627c81270ed23326a
+1
+Hex
+Address
+Text
+Number
+Hex
+0x0000000000000000000000000000000000000000000000000000000000000003
+2
+Hex
+Address
+Text
+Number
+Hex
+0x0000000000000000000000000000000000000000000000000000000000000001
+Data
+0x000000000000000000000000000000000000000000000000000000000013a4000000000000000000000000000000000000000000000000000000000000000000
+Address
+HubInstance
+9
+Decode input data
+Method id
+a1facf11
+Call
+UpdateAsset(uint256 indexed assetId, uint256 drawnIndex, uint256 drawnRate, uint256 accruedFees)
+Name
+Type
+Indexed?
+Data
+assetId
+uint256
+true
+0
+drawnIndex
+uint256
+false
+1000364521998113210283495616
+drawnRate
+uint256
+false
+21304518532299563735166289
+accruedFees
+uint256
+false
+2167344866
+Topics
+0
+0xa1facf110ded5028ee267fa3d5986f2aa4dc14230b79ffd27e95760f14883350
+1
+Hex
+Address
+Text
+Number
+Hex
+0x0000000000000000000000000000000000000000000000000000000000000000
+Data
+0x0000000000000000000000000000000000000000033b7b6d66c16be24e9690c0000000000000000000000000000000000000000000119f684389f59d51dfad5100000000000000000000000000000000000000000000000000000000812f0ee2
+Made with
+
+Scan, inspect, and analyze EVM based blockchains with Blockscout, a blockchain explorer for Ethereum networks.
+
+Backend: v11.3.2
+
+Frontend: v2.11.3
+
+Copyright © Blockscout Limited 2023-2026
+
+This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+Contribute
+PRO API
+Autoscout
+Docs
+X
+Discord
+All chains
+
+Arc Mainnet transaction 0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8 | Blockscout

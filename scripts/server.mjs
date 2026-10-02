@@ -1,6 +1,6 @@
 import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
-const files = new Map([['/', ['index.html','text/html']], ['/index.html', ['index.html','text/html']], ['/style.css', ['style.css','text/css']], ['/app.mjs', ['app.mjs','text/javascript']], ['/verifier.mjs', ['verifier.mjs','text/javascript']], ['/sample.mjs', ['sample.mjs','text/javascript']], ['/live-example.mjs', ['live-example.mjs','text/javascript']], ['/receipt.mjs', ['receipt.mjs','text/javascript']]]);
+const files = new Map([['/', ['index.html','text/html']], ['/index.html', ['index.html','text/html']], ['/style.css', ['style.css','text/css']], ['/app.mjs', ['app.mjs','text/javascript']], ['/verifier.mjs', ['verifier.mjs','text/javascript']], ['/sample.mjs', ['sample.mjs','text/javascript']], ['/live-example.mjs', ['live-example.mjs','text/javascript']], ['/receipt.mjs', ['receipt.mjs','text/javascript']], ['/batch.mjs', ['batch.mjs','text/javascript']], ['/batch-ui.mjs', ['batch-ui.mjs','text/javascript']], ['/orders.mjs', ['orders.mjs','text/javascript']], ['/orders-ui.mjs', ['orders-ui.mjs','text/javascript']]]);
 const port = Number(process.env.PORT || 4313);
 export const server = createServer(async (req, res) => {
   const file = files.get(new URL(req.url, 'http://localhost').pathname);

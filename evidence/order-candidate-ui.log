@@ -1,0 +1,6 @@
+Arc Receipt: http://127.0.0.1:4327
+{
+  "passed": true,
+  "checks": 21,
+  "errors": []
+}

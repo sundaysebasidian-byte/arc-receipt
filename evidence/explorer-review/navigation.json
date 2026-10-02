@@ -1,0 +1,142 @@
+{
+  "checkedAt": "2026-10-02T06:36:24.954Z",
+  "source": "Official Explorer, real fresh browser navigation; not a user study",
+  "cases": [
+    {
+      "name": "direct",
+      "hash": "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a",
+      "url": "https://explorer.arc.io/tx/0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a",
+      "title": "Arc Mainnet transaction 0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a | Blockscout",
+      "controls": [
+        "Chains",
+        "Log in",
+        "API",
+        "Log in",
+        "0xA8...C4B3",
+        "Details",
+        "Token transfers",
+        "User operations",
+        "Internal txns",
+        "Logs",
+        "State",
+        "Raw trace",
+        "23836456",
+        "Bybit 2",
+        "0xA818CFE3d358dC65a7a1a21514fAEeFAcf2EC4B3",
+        "Bybit 2",
+        "0xA8...C4B3",
+        "USDC",
+        "v11.3.2",
+        "v2.11.3",
+        "Privacy Policy",
+        "Terms of Service",
+        "Contribute",
+        "PRO API",
+        "Autoscout",
+        "Docs",
+        "X",
+        "Discord",
+        "All chains",
+        "API"
+      ],
+      "capturedText": "direct-overview.txt",
+      "screenshot": "direct-overview.png",
+      "tabs": [
+        {
+          "tab": "Token transfers",
+          "url": "https://explorer.arc.io/tx/0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a?tab=token_transfers",
+          "text": "direct-token-transfers.txt",
+          "screenshot": "direct-token-transfers.png"
+        },
+        {
+          "tab": "State",
+          "url": "https://explorer.arc.io/tx/0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a?tab=state",
+          "text": "direct-state.txt",
+          "screenshot": "direct-state.png"
+        },
+        {
+          "tab": "Logs",
+          "url": "https://explorer.arc.io/tx/0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a?tab=logs",
+          "text": "direct-logs.txt",
+          "screenshot": "direct-logs.png"
+        }
+      ]
+    },
+    {
+      "name": "swap",
+      "hash": "0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8",
+      "url": "https://explorer.arc.io/tx/0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8",
+      "title": "Arc Mainnet transaction 0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8 | Blockscout",
+      "controls": [
+        "Chains",
+        "Log in",
+        "API",
+        "Log in",
+        "cirBTC",
+        "USDC",
+        "Details",
+        "Token transfers",
+        "User operations",
+        "Internal txns",
+        "Logs",
+        "State",
+        "Raw trace",
+        "23560813",
+        "0x870C73C98A14b6956b79247e1a1CDC68BA0060ee",
+        "0xC0eCEf8CB7B3438e3c86F45B524E505931aE4Ed2",
+        "0x87...60ee",
+        "0xC0...4Ed2",
+        "cirBTC",
+        "0xC0...4Ed2",
+        "GiverPositionManager",
+        "cirBTC",
+        "GiverPositionManager",
+        "HubInstance",
+        "cirBTC",
+        "HubInstance",
+        "TakerPositionManager",
+        "USDC",
+        "TakerPositionManager",
+        "0xC0...4Ed2",
+        "USDC",
+        "0xC0...4Ed2",
+        "0x87...60ee",
+        "USDC",
+        "v11.3.2",
+        "v2.11.3",
+        "Privacy Policy",
+        "Terms of Service",
+        "Contribute",
+        "PRO API",
+        "Autoscout",
+        "Docs",
+        "X",
+        "Discord",
+        "All chains",
+        "API"
+      ],
+      "capturedText": "swap-overview.txt",
+      "screenshot": "swap-overview.png",
+      "tabs": [
+        {
+          "tab": "Token transfers",
+          "url": "https://explorer.arc.io/tx/0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8?tab=token_transfers",
+          "text": "swap-token-transfers.txt",
+          "screenshot": "swap-token-transfers.png"
+        },
+        {
+          "tab": "State",
+          "url": "https://explorer.arc.io/tx/0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8?tab=state",
+          "text": "swap-state.txt",
+          "screenshot": "swap-state.png"
+        },
+        {
+          "tab": "Logs",
+          "url": "https://explorer.arc.io/tx/0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8?tab=logs",
+          "text": "swap-logs.txt",
+          "screenshot": "swap-logs.png"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "checkedAt": "2026-10-02T12:00:22.964Z",
+  "passed": true,
+  "workflowCount": 4,
+  "cases": [
+    {
+      "name": "01-direct",
+      "source": "actual_public_rpc",
+      "steps": [
+        "Open local UI",
+        "Choose Try the complete check in the first-review guide",
+        "Inspect incoming100.01 / outgoing0 / net100.01 and explicit expected-net comparison"
+      ],
+      "rpcReads": 4,
+      "output": {
+        "status": "Expected transaction net matched",
+        "incoming": "100.01",
+        "outgoing": "0",
+        "net": "100.01",
+        "amount-comparison": "Compared with transaction net: expected 100.01 USDC; exact integer match.",
+        "case-context": "",
+        "expected-basis": "Expected net 100.01 USDC · incoming − outgoing in this transaction.",
+        "hash-full": "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a",
+        "recipient-full": "0xa818cfe3d358dc65a7a1a21514faeefacf2ec4b3",
+        "block-time": "2026-10-02 · 06:24:37 UTC",
+        "checked-time": "2026-10-02 · 12:00:17 UTC",
+        "recheck-note": ""
+      },
+      "screenshot": "01-direct.png"
+    },
+    {
+      "name": "02-exact-difference",
+      "source": "actual_public_rpc",
+      "steps": [
+        "Choose preset Exact expected-net difference",
+        "Same actual transaction; expected net100.010001",
+        "Inspect exact0.000001 difference; no invoice-paid/unpaid decision"
+      ],
+      "rpcReads": 4,
+      "output": {
+        "status": "Expected transaction net differs",
+        "incoming": "100.01",
+        "outgoing": "0",
+        "net": "100.01",
+        "amount-comparison": "Compared with transaction net: Below expected by 0.000001 USDC; expected net 100.010001 USDC.",
+        "case-context": "",
+        "expected-basis": "Expected net 100.010001 USDC · incoming − outgoing in this transaction.",
+        "hash-full": "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a",
+        "recipient-full": "0xa818cfe3d358dc65a7a1a21514faeefacf2ec4b3",
+        "block-time": "2026-10-02 · 06:24:37 UTC",
+        "checked-time": "2026-10-02 · 12:00:18 UTC",
+        "recheck-note": ""
+      },
+      "screenshot": "02-exact-difference.png"
+    },
+    {
+      "name": "03-normal-swap",
+      "source": "actual_public_rpc",
+      "steps": [
+        "Choose preset Normal swap intermediary",
+        "Inspect selected TakerPositionManager incoming/outgoing/net; expectation blank",
+        "Expand paired18/6 logs; treat normal routing as technical context"
+      ],
+      "rpcReads": 4,
+      "output": {
+        "status": "Zero net flow observed",
+        "incoming": "1458.033036",
+        "outgoing": "1458.033036",
+        "net": "0",
+        "amount-comparison": "Expected-net comparison not requested. Incoming and outgoing are still shown separately.",
+        "case-context": "Public Explorer context: a normal cirBTC → USDC swap; selected address is labelled TakerPositionManager. Its incoming and onward transfers offset. This is a technical boundary example, not merchant nonpayment evidence.",
+        "expected-basis": "Expected net not set · incoming − outgoing in this transaction.",
+        "hash-full": "0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8",
+        "recipient-full": "0xe9fae1c386c6f45b1fb3c3ef01ade424dad4bccf",
+        "block-time": "2026-09-30 · 15:33:16 UTC",
+        "checked-time": "2026-10-02 · 12:00:20 UTC",
+        "recheck-note": ""
+      },
+      "screenshot": "03-normal-swap.png"
+    },
+    {
+      "name": "04-evidence-handoff",
+      "source": "actual_public_rpc",
+      "steps": [
+        "Return to preset Direct native transfer (preparation fresh read)",
+        "Download readable HTML and JSON with raw receipt/block and review scope",
+        "Choose Recheck saved JSON beside result exports and import that export",
+        "Recompute saved claims then fresh fixed-RPC query; inspect consistent recheck and review boundaries"
+      ],
+      "rpcReads": 8,
+      "output": {
+        "status": "Expected transaction net matched",
+        "incoming": "100.01",
+        "outgoing": "0",
+        "net": "100.01",
+        "amount-comparison": "Compared with transaction net: expected 100.01 USDC; exact integer match.",
+        "case-context": "",
+        "expected-basis": "Expected net 100.01 USDC · incoming − outgoing in this transaction.",
+        "hash-full": "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a",
+        "recipient-full": "0xa818cfe3d358dc65a7a1a21514faeefacf2ec4b3",
+        "block-time": "2026-10-02 · 06:24:37 UTC",
+        "checked-time": "2026-10-02 · 12:00:22 UTC",
+        "recheck-note": "Recheck consistent · saved evidence recomputed, then transaction fetched fresh from the official mainnet RPC."
+      },
+      "screenshot": "04-evidence-handoff.png"
+    }
+  ],
+  "rpcRequests": [
+    {
+      "method": "eth_chainId",
+      "params": []
+    },
+    {
+      "method": "eth_getTransactionReceipt",
+      "params": [
+        "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a"
+      ]
+    },
+    {
+      "method": "eth_getBlockByNumber",
+      "params": [
+        "0x16bb728",
+        false
+      ]
+    },
+    {
+      "method": "eth_blockNumber",
+      "params": []
+    },
+    {
+      "method": "eth_chainId",
+      "params": []
+    },
+    {
+      "method": "eth_getTransactionReceipt",
+      "params": [
+        "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a"
+      ]
+    },
+    {
+      "method": "eth_getBlockByNumber",
+      "params": [
+        "0x16bb728",
+        false
+      ]
+    },
+    {
+      "method": "eth_blockNumber",
+      "params": []
+    },
+    {
+      "method": "eth_chainId",
+      "params": []
+    },
+    {
+      "method": "eth_getTransactionReceipt",
+      "params": [
+        "0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8"
+      ]
+    },
+    {
+      "method": "eth_getBlockByNumber",
+      "params": [
+        "0x167826d",
+        false
+      ]
+    },
+    {
+      "method": "eth_blockNumber",
+      "params": []
+    },
+    {
+      "method": "eth_chainId",
+      "params": []
+    },
+    {
+      "method": "eth_getTransactionReceipt",
+      "params": [
+        "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a"
+      ]
+    },
+    {
+      "method": "eth_getBlockByNumber",
+      "params": [
+        "0x16bb728",
+        false
+      ]
+    },
+    {
+      "method": "eth_blockNumber",
+      "params": []
+    },
+    {
+      "method": "eth_chainId",
+      "params": []
+    },
+    {
+      "method": "eth_getTransactionReceipt",
+      "params": [
+        "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a"
+      ]
+    },
+    {
+      "method": "eth_getBlockByNumber",
+      "params": [
+        "0x16bb728",
+        false
+      ]
+    },
+    {
+      "method": "eth_blockNumber",
+      "params": []
+    }
+  ],
+  "browserErrors": [],
+  "source": "Independent automated local workflows with real public RPC reads. No RPC fixtures, user study, task timing benefit, customer intent or ownership validation.",
+  "samplesAreNotUserEarnings": true,
+  "published": false
+}

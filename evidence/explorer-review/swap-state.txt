@@ -1,0 +1,130 @@
+Chains
+|
+Gas 
+< $0.01
+
+Blockchain
+
+Tokens
+
+Charts & stats
+
+API
+
+Other
+
+/
+Log in
+Transaction details
+Swap 0.013 
+cirBTC
+for 1,458.03 
+USDC
+Details
+Token transfers
+User operations
+Internal txns
+Logs
+State
+Raw trace
+
+A set of information that represents the current state is updated when a transaction takes place on the network. The below is a summary of those changes.
+
+Type	Address	Before	After	Change	Token ID
+
+	
+0x87...60ee
+	
+10,542.085952150730845802 USDC
+	
+10,542.074827443930845802 USDC
+	
+- 0.0111247068
+	
+
+Fee Recipient
+	
+0x3F...5C8c
+	
+26,296.626885393772516023 USDC
+	
+26,296.626940740572516023 USDC
+	
++ 0.0000553468
+	
+
+	
+HubInstance
+	
+1,046.59775704
+ 
+cirBTC
+	
+1,046.61062872
+ 
+cirBTC
+	
++ 0.01287168
+	
+
+	
+HubInstance
+	
+76,236,268.588232
+ 
+USDC
+	
+76,234,810.555196
+ 
+USDC
+	
+- 1,458.033036
+	
+
+	
+0x87...60ee
+	
+0.16558157
+ 
+cirBTC
+	
+0.15270989
+ 
+cirBTC
+	
+- 0.01287168
+	
+
+	
+0x87...60ee
+	
+10,542.085952
+ 
+USDC
+	
+12,000.118988
+ 
+USDC
+	
++ 1,458.033036
+	
+Made with
+
+Scan, inspect, and analyze EVM based blockchains with Blockscout, a blockchain explorer for Ethereum networks.
+
+Backend: v11.3.2
+
+Frontend: v2.11.3
+
+Copyright © Blockscout Limited 2023-2026
+
+This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+Contribute
+PRO API
+Autoscout
+Docs
+X
+Discord
+All chains
+
+Arc Mainnet transaction 0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8 | Blockscout

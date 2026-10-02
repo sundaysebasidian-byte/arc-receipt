@@ -1,0 +1,90 @@
+Chains
+|
+Gas 
+< $0.01
+
+Blockchain
+
+Tokens
+
+Charts & stats
+
+API
+
+Other
+
+/
+Log in
+Transaction details
+Transfer 100.01 USDC to 
+0xA8...C4B3
+Details
+Token transfers
+User operations
+Internal txns
+Logs
+State
+Raw trace
+Address
+0xffffFFFfFFffffffffffffffFfFFFfffFFFfFFfE
+15
+Decode input data
+Method id
+ddf252ad
+Call
+Transfer(address indexed from, address indexed to, uint256 value)
+Name
+Type
+Indexed?
+Data
+from
+address
+true
+0xBaeD383EDE0e5d9d72430661f3285DAa77E9439F
+to
+address
+true
+0xA818CFE3d358dC65a7a1a21514fAEeFAcf2EC4B3
+value
+uint256
+false
+100010000000000000000
+Topics
+0
+0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+1
+Hex
+Address
+Text
+Number
+Hex
+0x000000000000000000000000baed383ede0e5d9d72430661f3285daa77e9439f
+2
+Hex
+Address
+Text
+Number
+Hex
+0x000000000000000000000000a818cfe3d358dc65a7a1a21514faeefacf2ec4b3
+Data
+0x0000000000000000000000000000000000000000000000056beae51fd2d10000
+Made with
+
+Scan, inspect, and analyze EVM based blockchains with Blockscout, a blockchain explorer for Ethereum networks.
+
+Backend: v11.3.2
+
+Frontend: v2.11.3
+
+Copyright © Blockscout Limited 2023-2026
+
+This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+Contribute
+PRO API
+Autoscout
+Docs
+X
+Discord
+All chains
+
+Arc Mainnet transaction 0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a | Blockscout

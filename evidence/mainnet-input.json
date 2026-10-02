@@ -1,6 +1,6 @@
 {
-  "txHash": "0xa1d4b142cdd89abccc7524db878774661e678c8538a732c79f36588e0c58bf07",
-  "recipient": "0x6bd10520d1ae86919ebb141bdd2833ba4e0af838",
-  "expectedAmount": "268.350916",
-  "minConfirmations": 3
+  "txHash": "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a",
+  "recipient": "0xa818cfe3d358dc65a7a1a21514faeefacf2ec4b3",
+  "expectedAmount": "100.01",
+  "minConfirmations": 1
 }

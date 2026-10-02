@@ -1,0 +1,129 @@
+Arc Receipt: http://127.0.0.1:4314
+{
+  "checks": [
+    {
+      "case": "Initial desktop and server allowlist",
+      "source": "local"
+    },
+    {
+      "case": "Inline invalid input with keyboard focus",
+      "source": "local"
+    },
+    {
+      "case": "Synthetic mode unmistakable in UI and both exports",
+      "source": "local"
+    },
+    {
+      "case": "Editing clears previous observation",
+      "source": "local"
+    },
+    {
+      "case": "Real mainnet exact receipt, six explicit checks, Arc one-block default",
+      "source": "actual_public_rpc",
+      "tx": "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a"
+    },
+    {
+      "case": "Readable HTML receipt with full identifiers and trust boundary",
+      "source": "actual_public_rpc"
+    },
+    {
+      "case": "Real native-only raw units do not invent an ERC20 mirror",
+      "source": "actual_public_rpc"
+    },
+    {
+      "case": "Movement drill-down shows one canonical native-only transfer",
+      "source": "actual_public_rpc"
+    },
+    {
+      "case": "Saved evidence reimported and fetched fresh from mainnet",
+      "source": "actual_public_rpc"
+    },
+    {
+      "case": "Tampered saved amount/status flagged; supplied endpoint ignored",
+      "source": "modified_saved_claims_then_actual_public_rpc"
+    },
+    {
+      "case": "Real normal swap intermediary has incoming and outgoing, zero net and no invoice conclusion",
+      "source": "actual_public_rpc",
+      "tx": "0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8"
+    },
+    {
+      "case": "Real normal swap zero-net equation and18/6 precision pairs",
+      "source": "actual_public_rpc"
+    },
+    {
+      "case": "390px mobile real mainnet receipt and viewport screenshots",
+      "source": "actual_public_rpc"
+    },
+    {
+      "case": "390px precision trace has exact raw units with no overflow",
+      "source": "actual_public_rpc"
+    },
+    {
+      "case": "320px mobile no horizontal overflow and touch-size primary action",
+      "source": "local_layout"
+    },
+    {
+      "case": "Explorer URL normalization and exact underpayment difference",
+      "source": "replayed_public_evidence_fixture"
+    },
+    {
+      "case": "Overpayment remains review state",
+      "source": "replayed_public_evidence_fixture"
+    },
+    {
+      "case": "Another chain clears receipt with specific recovery text",
+      "source": "injected_abnormal_rpc_fixture"
+    },
+    {
+      "case": "Absent receipt clears receipt with specific recovery text",
+      "source": "injected_abnormal_rpc_fixture"
+    },
+    {
+      "case": "Reverted transaction clears receipt with specific recovery text",
+      "source": "injected_abnormal_rpc_fixture"
+    },
+    {
+      "case": "Block mismatch clears receipt with specific recovery text",
+      "source": "injected_abnormal_rpc_fixture"
+    },
+    {
+      "case": "Native-only explanation does not invent a paired ERC20 event",
+      "source": "replayed_public_evidence_fixture"
+    },
+    {
+      "case": "Conflicting ERC20/native stream refused in UI",
+      "source": "injected_abnormal_rpc_fixture"
+    },
+    {
+      "case": "Rate-limit error has recovery action and no payment conclusion",
+      "source": "injected_http_429"
+    },
+    {
+      "case": "Retry from a failure clears the error and recomputes the matching receipt",
+      "source": "replayed_public_evidence_fixture"
+    },
+    {
+      "case": "Loading is visible with disabled submit and a cancel action",
+      "source": "injected_delayed_transport"
+    },
+    {
+      "case": "Cancellation prevents delayed response from rendering stale receipt",
+      "source": "injected_delayed_transport"
+    },
+    {
+      "case": "Editing during receipt-file read prevents stale import takeover",
+      "source": "injected_delayed_local_file_read"
+    },
+    {
+      "case": "RPC request shapes include transaction hash/block queries only; no recipient or expected-amount parameter",
+      "source": "all_observed_request_shapes"
+    },
+    {
+      "case": "Only four read RPC methods, no wallet/write calls or runtime errors",
+      "source": "all_observed_requests"
+    }
+  ],
+  "errors": [],
+  "liveWrites": 0
+}

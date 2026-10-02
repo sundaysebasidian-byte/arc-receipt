@@ -1,0 +1,65 @@
+{
+  "checkedAt": "2026-10-02T12:00:47.837Z",
+  "passed": true,
+  "file": "order-demo-bundle.json",
+  "method": "Recompute saved receipts with core checks, independently decode canonical system logs, reject repeated contributing hashes and sum raw integer units by unverified order label",
+  "orders": [
+    {
+      "orderId": "DEMO-SPLIT",
+      "expectedTotalUSDC": "1558.043036",
+      "observedNetUSDC": "1558.043036",
+      "differenceUSDC": "0",
+      "status": "matched",
+      "complete": true,
+      "observedPayments": 2,
+      "inputRecords": 3,
+      "records": [
+        2,
+        3,
+        4
+      ],
+      "warnings": [
+        "Repeated input was counted once."
+      ],
+      "demo": true,
+      "scope": "User-supplied order association. Sum of selected-address transaction nets, not proof of commercial settlement, address control or customer intent."
+    },
+    {
+      "orderId": "DEMO-MISSING",
+      "expectedTotalUSDC": "10",
+      "observedNetUSDC": "0",
+      "differenceUSDC": null,
+      "status": "incomplete",
+      "complete": false,
+      "observedPayments": 0,
+      "inputRecords": 1,
+      "records": [
+        5
+      ],
+      "warnings": [],
+      "demo": true,
+      "scope": "User-supplied order association. Sum of selected-address transaction nets, not proof of commercial settlement, address control or customer intent."
+    }
+  ],
+  "payments": [
+    {
+      "record": 2,
+      "hash": "0x68e75b9710c19c0caf34d6cb440202ba5fffaef10dbcf13e5f49ee0d216dff2a",
+      "address": "0xa818cfe3d358dc65a7a1a21514faeefacf2ec4b3",
+      "systemIncomingUnits": "100010000000000000000",
+      "systemOutgoingUnits": "0",
+      "netUSDC": "100.01"
+    },
+    {
+      "record": 3,
+      "hash": "0x1732bf16a26831ba5a7d183ceb35c893bb9053630f9549ed99269985ab62d7d8",
+      "address": "0x870c73c98a14b6956b79247e1a1cdc68ba0060ee",
+      "systemIncomingUnits": "1458033036000000000000",
+      "systemOutgoingUnits": "0",
+      "netUSDC": "1458.033036"
+    }
+  ],
+  "rpcReads": 0,
+  "claimedOrdersTrusted": false,
+  "limits": "Offline internal consistency only. Unsigned saved responses and user-supplied order associations do not establish chain authenticity, commercial settlement or customer intent."
+}
